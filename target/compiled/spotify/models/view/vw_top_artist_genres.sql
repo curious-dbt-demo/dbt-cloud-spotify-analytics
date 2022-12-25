@@ -1,14 +1,19 @@
 -- top_artist_genres table
-with artist_genres as (
+With other_genres as (
+    select split(a.artist_genre_others) as nested_genres
+    from `dbt-demo-data-372717`.`dbt_ddemo`.`fct_top_artists` f
+    left join `dbt-demo-data-372717`.`dbt_ddemo`.`dim_artists` a using (artist_id)
+),
+
+artist_genres as (
     select
         a.artist_genre
     from `dbt-demo-data-372717`.`dbt_ddemo`.`fct_top_artists` f
     left join `dbt-demo-data-372717`.`dbt_ddemo`.`dim_artists` a using (artist_id)
     union all
     select
-        unnest(string_to_array(a.artist_genre_others, ', ')) as artist_genre
-    from `dbt-demo-data-372717`.`dbt_ddemo`.`fct_top_artists` f
-    left join `dbt-demo-data-372717`.`dbt_ddemo`.`dim_artists` a using (artist_id)
+        unnested
+    from other_genres, unnest(nested_genres) as unnested
 )
 select
     *,
