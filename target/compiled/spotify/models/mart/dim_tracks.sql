@@ -19,7 +19,7 @@
         track_liveness,
         track_valence
     from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_songplays`
-    union
+    union distinct
 
     select distinct
         track_id,

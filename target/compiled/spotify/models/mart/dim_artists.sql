@@ -10,7 +10,7 @@
         artist_genre,
         artist_genre_others                                     
     from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_songplays`
-    union
+    union distinct
 
     select distinct
         artist_id,
@@ -20,7 +20,7 @@
         artist_genre,
         artist_genre_others                                     
     from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_top_artists`
-    union
+    union distinct
 
     select distinct
         artist_id,

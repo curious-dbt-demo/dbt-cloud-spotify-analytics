@@ -17,7 +17,7 @@
         album_release_year,
         album_type                                   
     from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_songplays`
-    union
+    union distinct
 
     select distinct
         album_id,
