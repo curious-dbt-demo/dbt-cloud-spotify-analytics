@@ -10,5 +10,5 @@
         artist_genre,
         artist_genre_others                                     
     from {{ ref(table) }}
-    {% if not loop.last -%} union {%- endif %}
+    {% if not loop.last -%} union distinct {%- endif %}
 {% endfor %}

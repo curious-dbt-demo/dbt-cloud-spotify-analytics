@@ -19,5 +19,5 @@
         track_liveness,
         track_valence
     from {{ ref(table) }}
-    {% if not loop.last -%} union {%- endif %}
+    {% if not loop.last -%} union distinct {%- endif %}
 {% endfor %}

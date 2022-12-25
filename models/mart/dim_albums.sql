@@ -8,5 +8,5 @@
         album_release_year,
         album_type                                   
     from {{ ref(table) }}
-    {% if not loop.last -%} union {%- endif %}
+    {% if not loop.last -%} union distinct {%- endif %}
 {% endfor %}
