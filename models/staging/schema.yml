@@ -3,7 +3,7 @@ version: 2
 # db sources
 sources:
   - name: spotify
-    schema: dbt-jleder
+    schema: dbt_jleder
     tables:
       - name: current_user_playlists
       - name: current_user_recently_played
