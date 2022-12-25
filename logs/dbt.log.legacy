@@ -1053,3 +1053,1973 @@ dbt.exceptions.DatabaseException: Database Error
 2022-12-25 17:20:27.159190 (Thread-85): handling status request
 2022-12-25 17:20:27.159586 (Thread-85): 17:20:27  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'ef74bd85-2ebe-4b56-b048-c091aa7e4897', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbf9438ae20>]}
 2022-12-25 17:20:27.160066 (Thread-85): sending response (<Response 2919 bytes [200 OK]>) to 10.0.40.27
+2022-12-25 17:33:02.987919 (MainThread): Running with dbt=1.3.1
+2022-12-25 17:33:03.617864 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt_rpc.task.server.RPCServerTask'>, debug=None, defer=None, exclude=None, fail_fast=None, host='0.0.0.0', log_cache_events=False, log_format=None, models=None, partial_parse=True, port=8580, printer_width=None, profile='user', profiles_dir='/usr/src/develop/.dbt', project_dir=None, record_timing_info=None, rpc_method=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='rpc', write_json=None)
+2022-12-25 17:33:03.627042 (MainThread): Tracking: tracking
+2022-12-25 17:33:03.663766 (Thread-12): 17:33:03  Unable to do partial parsing because profile has changed
+2022-12-25 17:33:03.664575 (Thread-12): 17:33:03  Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec676777f0>]}
+2022-12-25 17:33:03.670801 (MainThread): 17:33:03  Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec67677a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34efafa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34efadf0>]}
+2022-12-25 17:33:03.671037 (MainThread): Serving RPC server at 0.0.0.0:8580, pid=29
+2022-12-25 17:33:03.671283 (MainThread): Supported methods: ['build', 'cli_args', 'compile', 'compile_sql', 'deps', 'docs.generate', 'gc', 'get-manifest', 'kill', 'list', 'poll', 'ps', 'run', 'run-operation', 'run_sql', 'seed', 'snapshot', 'snapshot-freshness', 'source-freshness', 'status', 'test']
+2022-12-25 17:33:03.671458 (MainThread): Send requests to http://localhost:8580/jsonrpc
+2022-12-25 17:33:03.737943 (Thread-12): 17:33:03  Parsing macros/etc.sql
+2022-12-25 17:33:03.740709 (Thread-12): 17:33:03  Parsing macros/catalog.sql
+2022-12-25 17:33:03.746356 (Thread-12): 17:33:03  Parsing macros/adapters.sql
+2022-12-25 17:33:03.766259 (Thread-12): 17:33:03  Parsing macros/adapters/apply_grants.sql
+2022-12-25 17:33:03.768702 (Thread-12): 17:33:03  Parsing macros/materializations/seed.sql
+2022-12-25 17:33:03.771214 (Thread-12): 17:33:03  Parsing macros/materializations/incremental.sql
+2022-12-25 17:33:03.787818 (Thread-12): 17:33:03  Parsing macros/materializations/snapshot.sql
+2022-12-25 17:33:03.789487 (Thread-12): 17:33:03  Parsing macros/materializations/table.sql
+2022-12-25 17:33:03.796094 (Thread-12): 17:33:03  Parsing macros/materializations/copy.sql
+2022-12-25 17:33:03.798671 (Thread-12): 17:33:03  Parsing macros/materializations/view.sql
+2022-12-25 17:33:03.801283 (Thread-12): 17:33:03  Parsing macros/utils/intersect.sql
+2022-12-25 17:33:03.801719 (Thread-12): 17:33:03  Parsing macros/utils/position.sql
+2022-12-25 17:33:03.802292 (Thread-12): 17:33:03  Parsing macros/utils/escape_single_quotes.sql
+2022-12-25 17:33:03.802865 (Thread-12): 17:33:03  Parsing macros/utils/safe_cast.sql
+2022-12-25 17:33:03.803396 (Thread-12): 17:33:03  Parsing macros/utils/array_construct.sql
+2022-12-25 17:33:03.804230 (Thread-12): 17:33:03  Parsing macros/utils/datediff.sql
+2022-12-25 17:33:03.805400 (Thread-12): 17:33:03  Parsing macros/utils/timestamps.sql
+2022-12-25 17:33:03.806510 (Thread-12): 17:33:03  Parsing macros/utils/array_concat.sql
+2022-12-25 17:33:03.807087 (Thread-12): 17:33:03  Parsing macros/utils/right.sql
+2022-12-25 17:33:03.807751 (Thread-12): 17:33:03  Parsing macros/utils/array_append.sql
+2022-12-25 17:33:03.808489 (Thread-12): 17:33:03  Parsing macros/utils/split_part.sql
+2022-12-25 17:33:03.810199 (Thread-12): 17:33:03  Parsing macros/utils/date_trunc.sql
+2022-12-25 17:33:03.810765 (Thread-12): 17:33:03  Parsing macros/utils/hash.sql
+2022-12-25 17:33:03.811321 (Thread-12): 17:33:03  Parsing macros/utils/except.sql
+2022-12-25 17:33:03.811734 (Thread-12): 17:33:03  Parsing macros/utils/bool_or.sql
+2022-12-25 17:33:03.812200 (Thread-12): 17:33:03  Parsing macros/utils/dateadd.sql
+2022-12-25 17:33:03.812837 (Thread-12): 17:33:03  Parsing macros/utils/listagg.sql
+2022-12-25 17:33:03.813842 (Thread-12): 17:33:03  Parsing macros/etc/statement.sql
+2022-12-25 17:33:03.818761 (Thread-12): 17:33:03  Parsing macros/etc/datetime.sql
+2022-12-25 17:33:03.826754 (Thread-12): 17:33:03  Parsing macros/adapters/apply_grants.sql
+2022-12-25 17:33:03.840260 (Thread-12): 17:33:03  Parsing macros/adapters/freshness.sql
+2022-12-25 17:33:03.842152 (Thread-12): 17:33:03  Parsing macros/adapters/columns.sql
+2022-12-25 17:33:03.850997 (Thread-12): 17:33:03  Parsing macros/adapters/timestamps.sql
+2022-12-25 17:33:03.854223 (Thread-12): 17:33:03  Parsing macros/adapters/relation.sql
+2022-12-25 17:33:03.867687 (Thread-12): 17:33:03  Parsing macros/adapters/schema.sql
+2022-12-25 17:33:03.869776 (Thread-12): 17:33:03  Parsing macros/adapters/persist_docs.sql
+2022-12-25 17:33:03.874031 (Thread-12): 17:33:03  Parsing macros/adapters/metadata.sql
+2022-12-25 17:33:03.880666 (Thread-12): 17:33:03  Parsing macros/adapters/indexes.sql
+2022-12-25 17:33:03.883214 (Thread-12): 17:33:03  Parsing macros/get_custom_name/get_custom_database.sql
+2022-12-25 17:33:03.884706 (Thread-12): 17:33:03  Parsing macros/get_custom_name/get_custom_schema.sql
+2022-12-25 17:33:03.887023 (Thread-12): 17:33:03  Parsing macros/get_custom_name/get_custom_alias.sql
+2022-12-25 17:33:03.888581 (Thread-12): 17:33:03  Parsing macros/python_model/python.sql
+2022-12-25 17:33:03.894217 (Thread-12): 17:33:03  Parsing macros/materializations/hooks.sql
+2022-12-25 17:33:03.898456 (Thread-12): 17:33:03  Parsing macros/materializations/configs.sql
+2022-12-25 17:33:03.900763 (Thread-12): 17:33:03  Parsing macros/materializations/seeds/seed.sql
+2022-12-25 17:33:03.907129 (Thread-12): 17:33:03  Parsing macros/materializations/seeds/helpers.sql
+2022-12-25 17:33:03.923742 (Thread-12): 17:33:03  Parsing macros/materializations/tests/test.sql
+2022-12-25 17:33:03.927807 (Thread-12): 17:33:03  Parsing macros/materializations/tests/helpers.sql
+2022-12-25 17:33:03.929452 (Thread-12): 17:33:03  Parsing macros/materializations/tests/where_subquery.sql
+2022-12-25 17:33:03.931185 (Thread-12): 17:33:03  Parsing macros/materializations/models/view/helpers.sql
+2022-12-25 17:33:03.932441 (Thread-12): 17:33:03  Parsing macros/materializations/models/view/create_or_replace_view.sql
+2022-12-25 17:33:03.935577 (Thread-12): 17:33:03  Parsing macros/materializations/models/view/create_view_as.sql
+2022-12-25 17:33:03.937847 (Thread-12): 17:33:03  Parsing macros/materializations/models/view/view.sql
+2022-12-25 17:33:03.942892 (Thread-12): 17:33:03  Parsing macros/materializations/models/incremental/strategies.sql
+2022-12-25 17:33:03.949261 (Thread-12): 17:33:03  Parsing macros/materializations/models/incremental/column_helpers.sql
+2022-12-25 17:33:03.956632 (Thread-12): 17:33:03  Parsing macros/materializations/models/incremental/incremental.sql
+2022-12-25 17:33:03.966059 (Thread-12): 17:33:03  Parsing macros/materializations/models/incremental/on_schema_change.sql
+2022-12-25 17:33:03.981011 (Thread-12): 17:33:03  Parsing macros/materializations/models/incremental/is_incremental.sql
+2022-12-25 17:33:03.982438 (Thread-12): 17:33:03  Parsing macros/materializations/models/incremental/merge.sql
+2022-12-25 17:33:03.996175 (Thread-12): 17:33:03  Parsing macros/materializations/models/table/create_table_as.sql
+2022-12-25 17:33:03.999463 (Thread-12): 17:33:03  Parsing macros/materializations/models/table/table.sql
+2022-12-25 17:33:04.004467 (Thread-12): 17:33:04  Parsing macros/materializations/snapshots/strategies.sql
+2022-12-25 17:33:04.019942 (Thread-12): 17:33:04  Parsing macros/materializations/snapshots/snapshot_merge.sql
+2022-12-25 17:33:04.021468 (Thread-12): 17:33:04  Parsing macros/materializations/snapshots/snapshot.sql
+2022-12-25 17:33:04.032152 (Thread-12): 17:33:04  Parsing macros/materializations/snapshots/helpers.sql
+2022-12-25 17:33:04.043767 (Thread-12): 17:33:04  Parsing macros/generic_test_sql/not_null.sql
+2022-12-25 17:33:04.044570 (Thread-12): 17:33:04  Parsing macros/generic_test_sql/relationships.sql
+2022-12-25 17:33:04.045400 (Thread-12): 17:33:04  Parsing macros/generic_test_sql/unique.sql
+2022-12-25 17:33:04.046099 (Thread-12): 17:33:04  Parsing macros/generic_test_sql/accepted_values.sql
+2022-12-25 17:33:04.047375 (Thread-12): 17:33:04  Parsing macros/utils/intersect.sql
+2022-12-25 17:33:04.048216 (Thread-12): 17:33:04  Parsing macros/utils/position.sql
+2022-12-25 17:33:04.049281 (Thread-12): 17:33:04  Parsing macros/utils/escape_single_quotes.sql
+2022-12-25 17:33:04.050342 (Thread-12): 17:33:04  Parsing macros/utils/safe_cast.sql
+2022-12-25 17:33:04.051568 (Thread-12): 17:33:04  Parsing macros/utils/array_construct.sql
+2022-12-25 17:33:04.053100 (Thread-12): 17:33:04  Parsing macros/utils/cast_bool_to_text.sql
+2022-12-25 17:33:04.054214 (Thread-12): 17:33:04  Parsing macros/utils/datediff.sql
+2022-12-25 17:33:04.055425 (Thread-12): 17:33:04  Parsing macros/utils/concat.sql
+2022-12-25 17:33:04.056408 (Thread-12): 17:33:04  Parsing macros/utils/length.sql
+2022-12-25 17:33:04.057348 (Thread-12): 17:33:04  Parsing macros/utils/any_value.sql
+2022-12-25 17:33:04.058313 (Thread-12): 17:33:04  Parsing macros/utils/data_types.sql
+2022-12-25 17:33:04.064938 (Thread-12): 17:33:04  Parsing macros/utils/array_concat.sql
+2022-12-25 17:33:04.066560 (Thread-12): 17:33:04  Parsing macros/utils/right.sql
+2022-12-25 17:33:04.067736 (Thread-12): 17:33:04  Parsing macros/utils/array_append.sql
+2022-12-25 17:33:04.068794 (Thread-12): 17:33:04  Parsing macros/utils/last_day.sql
+2022-12-25 17:33:04.070573 (Thread-12): 17:33:04  Parsing macros/utils/split_part.sql
+2022-12-25 17:33:04.072523 (Thread-12): 17:33:04  Parsing macros/utils/date_trunc.sql
+2022-12-25 17:33:04.073596 (Thread-12): 17:33:04  Parsing macros/utils/literal.sql
+2022-12-25 17:33:04.074565 (Thread-12): 17:33:04  Parsing macros/utils/hash.sql
+2022-12-25 17:33:04.075786 (Thread-12): 17:33:04  Parsing macros/utils/except.sql
+2022-12-25 17:33:04.076608 (Thread-12): 17:33:04  Parsing macros/utils/bool_or.sql
+2022-12-25 17:33:04.077523 (Thread-12): 17:33:04  Parsing macros/utils/replace.sql
+2022-12-25 17:33:04.078747 (Thread-12): 17:33:04  Parsing macros/utils/dateadd.sql
+2022-12-25 17:33:04.079979 (Thread-12): 17:33:04  Parsing macros/utils/listagg.sql
+2022-12-25 17:33:04.082185 (Thread-12): 17:33:04  Parsing tests/generic/builtin.sql
+2022-12-25 17:33:04.344987 (Thread-12): 17:33:04  1699: static parser successfully parsed mart/fct_top_tracks.sql
+2022-12-25 17:33:04.357814 (Thread-12): 17:33:04  1699: static parser successfully parsed mart/fct_songplays.sql
+2022-12-25 17:33:04.360475 (Thread-12): 17:33:04  1699: static parser successfully parsed mart/fct_top_artists.sql
+2022-12-25 17:33:04.363198 (Thread-12): 17:33:04  1603: static parser failed on mart/dim_artists.sql
+2022-12-25 17:33:04.368096 (Thread-12): 17:33:04  1602: parser fallback to jinja rendering on mart/dim_artists.sql
+2022-12-25 17:33:04.369367 (Thread-12): 17:33:04  1603: static parser failed on mart/dim_albums.sql
+2022-12-25 17:33:04.374045 (Thread-12): 17:33:04  1602: parser fallback to jinja rendering on mart/dim_albums.sql
+2022-12-25 17:33:04.375492 (Thread-12): 17:33:04  1603: static parser failed on mart/dim_tracks.sql
+2022-12-25 17:33:04.380197 (Thread-12): 17:33:04  1602: parser fallback to jinja rendering on mart/dim_tracks.sql
+2022-12-25 17:33:04.381535 (Thread-12): 17:33:04  1699: static parser successfully parsed staging/stg_top_tracks.sql
+2022-12-25 17:33:04.384183 (Thread-12): 17:33:04  1699: static parser successfully parsed staging/stg_songplays.sql
+2022-12-25 17:33:04.386762 (Thread-12): 17:33:04  1699: static parser successfully parsed staging/stg_top_artists.sql
+2022-12-25 17:33:04.389924 (Thread-12): 17:33:04  1699: static parser successfully parsed view/vw_top_track_genres.sql
+2022-12-25 17:33:04.393004 (Thread-12): 17:33:04  1699: static parser successfully parsed view/vw_top_artist_genres.sql
+2022-12-25 17:33:04.395990 (Thread-12): 17:33:04  1699: static parser successfully parsed view/vw_songplays_genres.sql
+2022-12-25 17:33:04.398815 (Thread-12): 17:33:04  1699: static parser successfully parsed view/vw_songplays_albums.sql
+2022-12-25 17:33:04.657535 (Thread-12): 17:33:04  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34c7bc10>]}
+2022-12-25 17:33:04.794231 (Thread-13): handling ps request
+2022-12-25 17:33:04.795154 (Thread-14): handling status request
+2022-12-25 17:33:04.795414 (Thread-13): 17:33:04  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34c39160>]}
+2022-12-25 17:33:04.796148 (Thread-13): sending response (<Response 100 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:04.796336 (Thread-14): 17:33:04  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34c39430>]}
+2022-12-25 17:33:04.798171 (Thread-14): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:12.373203 (Thread-15): handling status request
+2022-12-25 17:33:12.374228 (Thread-15): 17:33:12  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34c39910>]}
+2022-12-25 17:33:12.375493 (Thread-15): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:12.429455 (Thread-16): handling cli_args request
+2022-12-25 17:33:12.433682 (Thread-16): 17:33:12  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34c39c40>]}
+2022-12-25 17:33:15.056949 (Thread-16): sending response (<Response 133 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:15.119153 (MainThread): 17:33:15  Unable to do partial parsing because config vars, config profile, or config target have changed
+2022-12-25 17:33:15.119574 (MainThread): 17:33:15  Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'ada18b0e-e46d-4e11-b28f-f9924f8d37c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f66204a2e80>]}
+2022-12-25 17:33:15.169350 (MainThread): 17:33:15  Parsing macros/etc.sql
+2022-12-25 17:33:15.171865 (MainThread): 17:33:15  Parsing macros/catalog.sql
+2022-12-25 17:33:15.177495 (MainThread): 17:33:15  Parsing macros/adapters.sql
+2022-12-25 17:33:15.200757 (MainThread): 17:33:15  Parsing macros/adapters/apply_grants.sql
+2022-12-25 17:33:15.204316 (MainThread): 17:33:15  Parsing macros/materializations/seed.sql
+2022-12-25 17:33:15.207565 (MainThread): 17:33:15  Parsing macros/materializations/incremental.sql
+2022-12-25 17:33:15.231442 (MainThread): 17:33:15  Parsing macros/materializations/snapshot.sql
+2022-12-25 17:33:15.233270 (MainThread): 17:33:15  Parsing macros/materializations/table.sql
+2022-12-25 17:33:15.243039 (MainThread): 17:33:15  Parsing macros/materializations/copy.sql
+2022-12-25 17:33:15.246603 (MainThread): 17:33:15  Parsing macros/materializations/view.sql
+2022-12-25 17:33:15.250573 (MainThread): 17:33:15  Parsing macros/utils/intersect.sql
+2022-12-25 17:33:15.251160 (MainThread): 17:33:15  Parsing macros/utils/position.sql
+2022-12-25 17:33:15.252050 (MainThread): 17:33:15  Parsing macros/utils/escape_single_quotes.sql
+2022-12-25 17:33:15.252722 (MainThread): 17:33:15  Parsing macros/utils/safe_cast.sql
+2022-12-25 17:33:15.253242 (MainThread): 17:33:15  Parsing macros/utils/array_construct.sql
+2022-12-25 17:33:15.254548 (MainThread): 17:33:15  Parsing macros/utils/datediff.sql
+2022-12-25 17:33:15.255912 (MainThread): 17:33:15  Parsing macros/utils/timestamps.sql
+2022-12-25 17:33:15.256992 (MainThread): 17:33:15  Parsing macros/utils/array_concat.sql
+2022-12-25 17:33:15.257580 (MainThread): 17:33:15  Parsing macros/utils/right.sql
+2022-12-25 17:33:15.258568 (MainThread): 17:33:15  Parsing macros/utils/array_append.sql
+2022-12-25 17:33:15.259364 (MainThread): 17:33:15  Parsing macros/utils/split_part.sql
+2022-12-25 17:33:15.261173 (MainThread): 17:33:15  Parsing macros/utils/date_trunc.sql
+2022-12-25 17:33:15.261767 (MainThread): 17:33:15  Parsing macros/utils/hash.sql
+2022-12-25 17:33:15.262266 (MainThread): 17:33:15  Parsing macros/utils/except.sql
+2022-12-25 17:33:15.262904 (MainThread): 17:33:15  Parsing macros/utils/bool_or.sql
+2022-12-25 17:33:15.263628 (MainThread): 17:33:15  Parsing macros/utils/dateadd.sql
+2022-12-25 17:33:15.264415 (MainThread): 17:33:15  Parsing macros/utils/listagg.sql
+2022-12-25 17:33:15.265716 (MainThread): 17:33:15  Parsing macros/etc/statement.sql
+2022-12-25 17:33:15.270589 (MainThread): 17:33:15  Parsing macros/etc/datetime.sql
+2022-12-25 17:33:15.354207 (Thread-17): handling ps request
+2022-12-25 17:33:15.354609 (Thread-17): 17:33:15  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34ce42e0>]}
+2022-12-25 17:33:15.355362 (Thread-17): sending response (<Response 525 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:15.278706 (MainThread): 17:33:15  Parsing macros/adapters/apply_grants.sql
+2022-12-25 17:33:15.291747 (MainThread): 17:33:15  Parsing macros/adapters/freshness.sql
+2022-12-25 17:33:15.363212 (Thread-18): handling poll request
+2022-12-25 17:33:15.363501 (Thread-18): 17:33:15  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34c41d90>]}
+2022-12-25 17:33:15.364207 (Thread-18): sending response (<Response 10043 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:15.293753 (MainThread): 17:33:15  Parsing macros/adapters/columns.sql
+2022-12-25 17:33:15.302765 (MainThread): 17:33:15  Parsing macros/adapters/timestamps.sql
+2022-12-25 17:33:15.306108 (MainThread): 17:33:15  Parsing macros/adapters/relation.sql
+2022-12-25 17:33:15.319859 (MainThread): 17:33:15  Parsing macros/adapters/schema.sql
+2022-12-25 17:33:15.321895 (MainThread): 17:33:15  Parsing macros/adapters/persist_docs.sql
+2022-12-25 17:33:15.326208 (MainThread): 17:33:15  Parsing macros/adapters/metadata.sql
+2022-12-25 17:33:15.332880 (MainThread): 17:33:15  Parsing macros/adapters/indexes.sql
+2022-12-25 17:33:15.335476 (MainThread): 17:33:15  Parsing macros/get_custom_name/get_custom_database.sql
+2022-12-25 17:33:15.336913 (MainThread): 17:33:15  Parsing macros/get_custom_name/get_custom_schema.sql
+2022-12-25 17:33:15.339174 (MainThread): 17:33:15  Parsing macros/get_custom_name/get_custom_alias.sql
+2022-12-25 17:33:15.340781 (MainThread): 17:33:15  Parsing macros/python_model/python.sql
+2022-12-25 17:33:15.346455 (MainThread): 17:33:15  Parsing macros/materializations/hooks.sql
+2022-12-25 17:33:15.350059 (MainThread): 17:33:15  Parsing macros/materializations/configs.sql
+2022-12-25 17:33:15.352199 (MainThread): 17:33:15  Parsing macros/materializations/seeds/seed.sql
+2022-12-25 17:33:15.358553 (MainThread): 17:33:15  Parsing macros/materializations/seeds/helpers.sql
+2022-12-25 17:33:15.375294 (MainThread): 17:33:15  Parsing macros/materializations/tests/test.sql
+2022-12-25 17:33:15.379602 (MainThread): 17:33:15  Parsing macros/materializations/tests/helpers.sql
+2022-12-25 17:33:15.381320 (MainThread): 17:33:15  Parsing macros/materializations/tests/where_subquery.sql
+2022-12-25 17:33:15.383014 (MainThread): 17:33:15  Parsing macros/materializations/models/view/helpers.sql
+2022-12-25 17:33:15.384234 (MainThread): 17:33:15  Parsing macros/materializations/models/view/create_or_replace_view.sql
+2022-12-25 17:33:15.387356 (MainThread): 17:33:15  Parsing macros/materializations/models/view/create_view_as.sql
+2022-12-25 17:33:15.389485 (MainThread): 17:33:15  Parsing macros/materializations/models/view/view.sql
+2022-12-25 17:33:15.394632 (MainThread): 17:33:15  Parsing macros/materializations/models/incremental/strategies.sql
+2022-12-25 17:33:15.401054 (MainThread): 17:33:15  Parsing macros/materializations/models/incremental/column_helpers.sql
+2022-12-25 17:33:15.488809 (Thread-19): handling status request
+2022-12-25 17:33:15.408596 (MainThread): 17:33:15  Parsing macros/materializations/models/incremental/incremental.sql
+2022-12-25 17:33:15.489367 (Thread-19): 17:33:15  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34c2d6a0>]}
+2022-12-25 17:33:15.490969 (Thread-19): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:15.418210 (MainThread): 17:33:15  Parsing macros/materializations/models/incremental/on_schema_change.sql
+2022-12-25 17:33:15.433421 (MainThread): 17:33:15  Parsing macros/materializations/models/incremental/is_incremental.sql
+2022-12-25 17:33:15.434823 (MainThread): 17:33:15  Parsing macros/materializations/models/incremental/merge.sql
+2022-12-25 17:33:15.448870 (MainThread): 17:33:15  Parsing macros/materializations/models/table/create_table_as.sql
+2022-12-25 17:33:15.452141 (MainThread): 17:33:15  Parsing macros/materializations/models/table/table.sql
+2022-12-25 17:33:15.457243 (MainThread): 17:33:15  Parsing macros/materializations/snapshots/strategies.sql
+2022-12-25 17:33:15.472092 (MainThread): 17:33:15  Parsing macros/materializations/snapshots/snapshot_merge.sql
+2022-12-25 17:33:15.473704 (MainThread): 17:33:15  Parsing macros/materializations/snapshots/snapshot.sql
+2022-12-25 17:33:15.484437 (MainThread): 17:33:15  Parsing macros/materializations/snapshots/helpers.sql
+2022-12-25 17:33:15.496381 (MainThread): 17:33:15  Parsing macros/generic_test_sql/not_null.sql
+2022-12-25 17:33:15.497152 (MainThread): 17:33:15  Parsing macros/generic_test_sql/relationships.sql
+2022-12-25 17:33:15.497998 (MainThread): 17:33:15  Parsing macros/generic_test_sql/unique.sql
+2022-12-25 17:33:15.498635 (MainThread): 17:33:15  Parsing macros/generic_test_sql/accepted_values.sql
+2022-12-25 17:33:15.500009 (MainThread): 17:33:15  Parsing macros/utils/intersect.sql
+2022-12-25 17:33:15.500830 (MainThread): 17:33:15  Parsing macros/utils/position.sql
+2022-12-25 17:33:15.501865 (MainThread): 17:33:15  Parsing macros/utils/escape_single_quotes.sql
+2022-12-25 17:33:15.503248 (MainThread): 17:33:15  Parsing macros/utils/safe_cast.sql
+2022-12-25 17:33:15.504293 (MainThread): 17:33:15  Parsing macros/utils/array_construct.sql
+2022-12-25 17:33:15.505822 (MainThread): 17:33:15  Parsing macros/utils/cast_bool_to_text.sql
+2022-12-25 17:33:15.506822 (MainThread): 17:33:15  Parsing macros/utils/datediff.sql
+2022-12-25 17:33:15.507987 (MainThread): 17:33:15  Parsing macros/utils/concat.sql
+2022-12-25 17:33:15.508905 (MainThread): 17:33:15  Parsing macros/utils/length.sql
+2022-12-25 17:33:15.509901 (MainThread): 17:33:15  Parsing macros/utils/any_value.sql
+2022-12-25 17:33:15.510795 (MainThread): 17:33:15  Parsing macros/utils/data_types.sql
+2022-12-25 17:33:15.517383 (MainThread): 17:33:15  Parsing macros/utils/array_concat.sql
+2022-12-25 17:33:15.518416 (MainThread): 17:33:15  Parsing macros/utils/right.sql
+2022-12-25 17:33:15.519462 (MainThread): 17:33:15  Parsing macros/utils/array_append.sql
+2022-12-25 17:33:15.520575 (MainThread): 17:33:15  Parsing macros/utils/last_day.sql
+2022-12-25 17:33:15.522309 (MainThread): 17:33:15  Parsing macros/utils/split_part.sql
+2022-12-25 17:33:15.524224 (MainThread): 17:33:15  Parsing macros/utils/date_trunc.sql
+2022-12-25 17:33:15.525319 (MainThread): 17:33:15  Parsing macros/utils/literal.sql
+2022-12-25 17:33:15.526386 (MainThread): 17:33:15  Parsing macros/utils/hash.sql
+2022-12-25 17:33:15.527383 (MainThread): 17:33:15  Parsing macros/utils/except.sql
+2022-12-25 17:33:15.528171 (MainThread): 17:33:15  Parsing macros/utils/bool_or.sql
+2022-12-25 17:33:15.529042 (MainThread): 17:33:15  Parsing macros/utils/replace.sql
+2022-12-25 17:33:15.530303 (MainThread): 17:33:15  Parsing macros/utils/dateadd.sql
+2022-12-25 17:33:15.531480 (MainThread): 17:33:15  Parsing macros/utils/listagg.sql
+2022-12-25 17:33:15.533578 (MainThread): 17:33:15  Parsing tests/generic/builtin.sql
+2022-12-25 17:33:15.794430 (MainThread): 17:33:15  1699: static parser successfully parsed mart/fct_top_tracks.sql
+2022-12-25 17:33:15.806138 (MainThread): 17:33:15  1699: static parser successfully parsed mart/fct_songplays.sql
+2022-12-25 17:33:15.808878 (MainThread): 17:33:15  1699: static parser successfully parsed mart/fct_top_artists.sql
+2022-12-25 17:33:15.811474 (MainThread): 17:33:15  1603: static parser failed on mart/dim_artists.sql
+2022-12-25 17:33:15.815900 (MainThread): 17:33:15  1602: parser fallback to jinja rendering on mart/dim_artists.sql
+2022-12-25 17:33:15.817248 (MainThread): 17:33:15  1603: static parser failed on mart/dim_albums.sql
+2022-12-25 17:33:15.821559 (MainThread): 17:33:15  1602: parser fallback to jinja rendering on mart/dim_albums.sql
+2022-12-25 17:33:15.823034 (MainThread): 17:33:15  1603: static parser failed on mart/dim_tracks.sql
+2022-12-25 17:33:15.827374 (MainThread): 17:33:15  1602: parser fallback to jinja rendering on mart/dim_tracks.sql
+2022-12-25 17:33:15.828655 (MainThread): 17:33:15  1699: static parser successfully parsed staging/stg_top_tracks.sql
+2022-12-25 17:33:15.831264 (MainThread): 17:33:15  1699: static parser successfully parsed staging/stg_songplays.sql
+2022-12-25 17:33:15.833981 (MainThread): 17:33:15  1699: static parser successfully parsed staging/stg_top_artists.sql
+2022-12-25 17:33:15.837023 (MainThread): 17:33:15  1699: static parser successfully parsed view/vw_top_track_genres.sql
+2022-12-25 17:33:15.840102 (MainThread): 17:33:15  1699: static parser successfully parsed view/vw_top_artist_genres.sql
+2022-12-25 17:33:15.843063 (MainThread): 17:33:15  1699: static parser successfully parsed view/vw_songplays_genres.sql
+2022-12-25 17:33:15.845887 (MainThread): 17:33:15  1699: static parser successfully parsed view/vw_songplays_albums.sql
+2022-12-25 17:33:16.154567 (MainThread): 17:33:16  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ada18b0e-e46d-4e11-b28f-f9924f8d37c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f66202f3520>]}
+2022-12-25 17:33:16.186975 (MainThread): 17:33:16  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ada18b0e-e46d-4e11-b28f-f9924f8d37c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f662052c2e0>]}
+2022-12-25 17:33:16.187285 (MainThread): 17:33:16  Found 13 models, 31 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 5 seed files, 0 sources, 0 exposures, 0 metrics
+2022-12-25 17:33:16.187390 (MainThread): 17:33:16  Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ada18b0e-e46d-4e11-b28f-f9924f8d37c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f66205ba2b0>]}
+2022-12-25 17:33:16.189494 (MainThread): 17:33:16  
+2022-12-25 17:33:16.189978 (MainThread): 17:33:16  Acquiring new bigquery connection "master"
+2022-12-25 17:33:16.191173 (ThreadPoolExecutor-0_0): 17:33:16  Acquiring new bigquery connection "list_dbt-demo-data-372717"
+2022-12-25 17:33:16.191320 (ThreadPoolExecutor-0_0): 17:33:16  Opening a new connection, currently in state init
+2022-12-25 17:33:16.417401 (ThreadPoolExecutor-1_0): 17:33:16  Acquiring new bigquery connection "list_dbt-demo-data-372717_dbt_ddemo"
+2022-12-25 17:33:16.417592 (ThreadPoolExecutor-1_0): 17:33:16  Opening a new connection, currently in state closed
+2022-12-25 17:33:16.577201 (Thread-20): handling poll request
+2022-12-25 17:33:16.577632 (Thread-20): 17:33:16  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34bbe6d0>]}
+2022-12-25 17:33:16.578720 (Thread-20): sending response (<Response 27662 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:16.606604 (MainThread): 17:33:16  Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ada18b0e-e46d-4e11-b28f-f9924f8d37c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6620458ca0>]}
+2022-12-25 17:33:16.607256 (MainThread): 17:33:16  Concurrency: 4 threads (target='default')
+2022-12-25 17:33:16.607379 (MainThread): 17:33:16  
+2022-12-25 17:33:16.609977 (Thread-1): 17:33:16  Began running node seed.spotify.current_user_playlists
+2022-12-25 17:33:16.610260 (Thread-1): 17:33:16  1 of 5 START seed file dbt_ddemo.current_user_playlists ........................ [RUN]
+2022-12-25 17:33:16.610827 (Thread-2): 17:33:16  Began running node seed.spotify.current_user_recently_played
+2022-12-25 17:33:16.611074 (Thread-2): 17:33:16  2 of 5 START seed file dbt_ddemo.current_user_recently_played .................. [RUN]
+2022-12-25 17:33:16.611515 (Thread-2): 17:33:16  Acquiring new bigquery connection "seed.spotify.current_user_recently_played"
+2022-12-25 17:33:16.611632 (Thread-2): 17:33:16  Began compiling node seed.spotify.current_user_recently_played
+2022-12-25 17:33:16.611731 (Thread-2): 17:33:16  finished collecting timing info
+2022-12-25 17:33:16.611841 (Thread-2): 17:33:16  Began executing node seed.spotify.current_user_recently_played
+2022-12-25 17:33:16.621153 (Thread-3): 17:33:16  Began running node seed.spotify.current_user_top_artists
+2022-12-25 17:33:16.621391 (Thread-3): 17:33:16  3 of 5 START seed file dbt_ddemo.current_user_top_artists ...................... [RUN]
+2022-12-25 17:33:16.621865 (Thread-3): 17:33:16  Acquiring new bigquery connection "seed.spotify.current_user_top_artists"
+2022-12-25 17:33:16.621971 (Thread-3): 17:33:16  Began compiling node seed.spotify.current_user_top_artists
+2022-12-25 17:33:16.622063 (Thread-3): 17:33:16  finished collecting timing info
+2022-12-25 17:33:16.622167 (Thread-3): 17:33:16  Began executing node seed.spotify.current_user_top_artists
+2022-12-25 17:33:16.626737 (Thread-1): 17:33:16  Acquiring new bigquery connection "seed.spotify.current_user_playlists"
+2022-12-25 17:33:16.626851 (Thread-1): 17:33:16  Began compiling node seed.spotify.current_user_playlists
+2022-12-25 17:33:16.626939 (Thread-1): 17:33:16  finished collecting timing info
+2022-12-25 17:33:16.627042 (Thread-1): 17:33:16  Began executing node seed.spotify.current_user_playlists
+2022-12-25 17:33:16.631437 (Thread-4): 17:33:16  Began running node seed.spotify.current_user_top_tracks
+2022-12-25 17:33:16.631667 (Thread-4): 17:33:16  4 of 5 START seed file dbt_ddemo.current_user_top_tracks ....................... [RUN]
+2022-12-25 17:33:16.632081 (Thread-4): 17:33:16  Acquiring new bigquery connection "seed.spotify.current_user_top_tracks"
+2022-12-25 17:33:16.632179 (Thread-4): 17:33:16  Began compiling node seed.spotify.current_user_top_tracks
+2022-12-25 17:33:16.632262 (Thread-4): 17:33:16  finished collecting timing info
+2022-12-25 17:33:16.632363 (Thread-4): 17:33:16  Began executing node seed.spotify.current_user_top_tracks
+2022-12-25 17:33:16.690612 (Thread-3): 17:33:16  Opening a new connection, currently in state init
+2022-12-25 17:33:16.691321 (Thread-1): 17:33:16  Opening a new connection, currently in state closed
+2022-12-25 17:33:16.709453 (Thread-4): 17:33:16  Opening a new connection, currently in state init
+2022-12-25 17:33:16.711026 (Thread-2): 17:33:16  Opening a new connection, currently in state init
+2022-12-25 17:33:17.556771 (Thread-21): handling ps request
+2022-12-25 17:33:17.557181 (Thread-21): 17:33:17  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34bc63d0>]}
+2022-12-25 17:33:17.557709 (Thread-21): sending response (<Response 525 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:17.754650 (Thread-22): handling status request
+2022-12-25 17:33:17.755064 (Thread-22): 17:33:17  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34bc64f0>]}
+2022-12-25 17:33:17.756508 (Thread-22): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:17.775769 (Thread-23): handling poll request
+2022-12-25 17:33:17.776089 (Thread-23): 17:33:17  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34bc6310>]}
+2022-12-25 17:33:17.776790 (Thread-23): sending response (<Response 13505 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:18.972238 (Thread-24): handling poll request
+2022-12-25 17:33:18.972645 (Thread-24): 17:33:18  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34bc6160>]}
+2022-12-25 17:33:18.973117 (Thread-24): sending response (<Response 335 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:19.771488 (Thread-25): handling ps request
+2022-12-25 17:33:19.771911 (Thread-25): 17:33:19  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34bc61f0>]}
+2022-12-25 17:33:19.772410 (Thread-25): sending response (<Response 524 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:19.957337 (Thread-26): handling status request
+2022-12-25 17:33:19.957761 (Thread-26): 17:33:19  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34bc65b0>]}
+2022-12-25 17:33:19.959035 (Thread-26): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:20.121654 (Thread-2): 17:33:20  Writing runtime SQL for node "seed.spotify.current_user_recently_played"
+2022-12-25 17:33:20.155074 (Thread-27): handling poll request
+2022-12-25 17:33:20.155445 (Thread-27): 17:33:20  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34bc6520>]}
+2022-12-25 17:33:20.155936 (Thread-27): sending response (<Response 715 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:20.163641 (Thread-2): 17:33:20  finished collecting timing info
+2022-12-25 17:33:20.164214 (Thread-2): 17:33:20  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ada18b0e-e46d-4e11-b28f-f9924f8d37c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6600165fd0>]}
+2022-12-25 17:33:20.164501 (Thread-2): 17:33:20  2 of 5 OK loaded seed file dbt_ddemo.current_user_recently_played .............. [CREATE 50 in 3.55s]
+2022-12-25 17:33:20.164718 (Thread-2): 17:33:20  Finished running node seed.spotify.current_user_recently_played
+2022-12-25 17:33:20.164870 (Thread-2): 17:33:20  Began running node seed.spotify.playlist_items
+2022-12-25 17:33:20.165081 (Thread-2): 17:33:20  5 of 5 START seed file dbt_ddemo.playlist_items ................................ [RUN]
+2022-12-25 17:33:20.165458 (Thread-2): 17:33:20  Acquiring new bigquery connection "seed.spotify.playlist_items"
+2022-12-25 17:33:20.165562 (Thread-2): 17:33:20  Began compiling node seed.spotify.playlist_items
+2022-12-25 17:33:20.165685 (Thread-2): 17:33:20  finished collecting timing info
+2022-12-25 17:33:20.165791 (Thread-2): 17:33:20  Began executing node seed.spotify.playlist_items
+2022-12-25 17:33:20.249955 (Thread-1): 17:33:20  Writing runtime SQL for node "seed.spotify.current_user_playlists"
+2022-12-25 17:33:20.295037 (Thread-1): 17:33:20  finished collecting timing info
+2022-12-25 17:33:20.295651 (Thread-1): 17:33:20  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ada18b0e-e46d-4e11-b28f-f9924f8d37c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6600128970>]}
+2022-12-25 17:33:20.295922 (Thread-1): 17:33:20  1 of 5 OK loaded seed file dbt_ddemo.current_user_playlists .................... [CREATE 50 in 3.69s]
+2022-12-25 17:33:20.296131 (Thread-1): 17:33:20  Finished running node seed.spotify.current_user_playlists
+2022-12-25 17:33:20.312570 (Thread-4): 17:33:20  Writing runtime SQL for node "seed.spotify.current_user_top_tracks"
+2022-12-25 17:33:20.346665 (Thread-4): 17:33:20  finished collecting timing info
+2022-12-25 17:33:20.347206 (Thread-4): 17:33:20  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ada18b0e-e46d-4e11-b28f-f9924f8d37c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f66000cb160>]}
+2022-12-25 17:33:20.347462 (Thread-4): 17:33:20  4 of 5 OK loaded seed file dbt_ddemo.current_user_top_tracks ................... [CREATE 50 in 3.72s]
+2022-12-25 17:33:20.347677 (Thread-4): 17:33:20  Finished running node seed.spotify.current_user_top_tracks
+2022-12-25 17:33:20.410352 (Thread-3): 17:33:20  Writing runtime SQL for node "seed.spotify.current_user_top_artists"
+2022-12-25 17:33:20.443147 (Thread-3): 17:33:20  finished collecting timing info
+2022-12-25 17:33:20.443903 (Thread-3): 17:33:20  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ada18b0e-e46d-4e11-b28f-f9924f8d37c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6600112850>]}
+2022-12-25 17:33:20.444244 (Thread-3): 17:33:20  3 of 5 OK loaded seed file dbt_ddemo.current_user_top_artists .................. [CREATE 50 in 3.82s]
+2022-12-25 17:33:20.444543 (Thread-3): 17:33:20  Finished running node seed.spotify.current_user_top_artists
+2022-12-25 17:33:20.610109 (Thread-2): 17:33:20  Opening a new connection, currently in state closed
+2022-12-25 17:33:21.341349 (Thread-28): handling poll request
+2022-12-25 17:33:21.341822 (Thread-28): 17:33:21  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34bc6d90>]}
+2022-12-25 17:33:21.342535 (Thread-28): sending response (<Response 11728 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:21.964793 (Thread-29): handling ps request
+2022-12-25 17:33:21.966381 (Thread-29): 17:33:21  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34bcc430>]}
+2022-12-25 17:33:21.966890 (Thread-29): sending response (<Response 525 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:22.153036 (Thread-30): handling status request
+2022-12-25 17:33:22.153442 (Thread-30): 17:33:22  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34bcc460>]}
+2022-12-25 17:33:22.154807 (Thread-30): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:22.542586 (Thread-31): handling poll request
+2022-12-25 17:33:22.542988 (Thread-31): 17:33:22  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34bcc5b0>]}
+2022-12-25 17:33:22.543457 (Thread-31): sending response (<Response 336 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:23.746011 (Thread-32): handling poll request
+2022-12-25 17:33:23.746408 (Thread-32): 17:33:23  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34bcc7f0>]}
+2022-12-25 17:33:23.746877 (Thread-32): sending response (<Response 336 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:23.988686 (Thread-2): 17:33:23  Writing runtime SQL for node "seed.spotify.playlist_items"
+2022-12-25 17:33:24.000222 (Thread-2): 17:33:24  finished collecting timing info
+2022-12-25 17:33:24.000795 (Thread-2): 17:33:24  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ada18b0e-e46d-4e11-b28f-f9924f8d37c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f66000da970>]}
+2022-12-25 17:33:24.001197 (Thread-2): 17:33:24  5 of 5 OK loaded seed file dbt_ddemo.playlist_items ............................ [CREATE 3338 in 3.84s]
+2022-12-25 17:33:24.001421 (Thread-2): 17:33:24  Finished running node seed.spotify.playlist_items
+2022-12-25 17:33:24.003043 (MainThread): 17:33:24  Acquiring new bigquery connection "master"
+2022-12-25 17:33:24.003506 (MainThread): 17:33:24  
+2022-12-25 17:33:24.003621 (MainThread): 17:33:24  Finished running 5 seeds in 0 hours 0 minutes and 7.81 seconds (7.81s).
+2022-12-25 17:33:24.003703 (MainThread): 17:33:24  Connection 'master' was properly closed.
+2022-12-25 17:33:24.003787 (MainThread): 17:33:24  Connection 'seed.spotify.current_user_playlists' was properly closed.
+2022-12-25 17:33:24.003848 (MainThread): 17:33:24  Connection 'seed.spotify.playlist_items' was properly closed.
+2022-12-25 17:33:24.003907 (MainThread): 17:33:24  Connection 'seed.spotify.current_user_top_artists' was properly closed.
+2022-12-25 17:33:24.003965 (MainThread): 17:33:24  Connection 'seed.spotify.current_user_top_tracks' was properly closed.
+2022-12-25 17:33:24.048998 (MainThread): 17:33:24  
+2022-12-25 17:33:24.049192 (MainThread): 17:33:24  Completed successfully
+2022-12-25 17:33:24.049293 (MainThread): 17:33:24  
+2022-12-25 17:33:24.049380 (MainThread): 17:33:24  Done. PASS=5 WARN=0 ERROR=0 SKIP=0 TOTAL=5
+2022-12-25 17:33:24.154606 (Thread-33): handling ps request
+2022-12-25 17:33:24.155006 (Thread-33): 17:33:24  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34f6ca60>]}
+2022-12-25 17:33:24.155503 (Thread-33): sending response (<Response 526 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:24.341286 (Thread-34): handling status request
+2022-12-25 17:33:24.341717 (Thread-34): 17:33:24  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec3505b880>]}
+2022-12-25 17:33:24.342987 (Thread-34): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:24.938575 (Thread-35): handling poll request
+2022-12-25 17:33:24.938981 (Thread-35): 17:33:24  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec35039250>]}
+2022-12-25 17:33:24.940210 (Thread-35): sending response (<Response 16227 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:26.338966 (Thread-36): handling ps request
+2022-12-25 17:33:26.339376 (Thread-36): 17:33:26  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34f32760>]}
+2022-12-25 17:33:26.339895 (Thread-36): sending response (<Response 551 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:26.535154 (Thread-37): handling status request
+2022-12-25 17:33:26.535566 (Thread-37): 17:33:26  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34f0e9d0>]}
+2022-12-25 17:33:26.536799 (Thread-37): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:46.511660 (Thread-38): handling status request
+2022-12-25 17:33:46.513287 (Thread-38): 17:33:46  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34f0ee50>]}
+2022-12-25 17:33:46.514557 (Thread-38): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:52.765397 (Thread-39): handling cli_args request
+2022-12-25 17:33:52.765832 (Thread-39): 17:33:52  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34f0ea90>]}
+2022-12-25 17:33:52.788643 (Thread-40): handling status request
+2022-12-25 17:33:52.789859 (Thread-40): 17:33:52  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d531fd0>]}
+2022-12-25 17:33:52.793000 (Thread-40): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:55.414911 (Thread-39): sending response (<Response 133 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:55.523225 (MainThread): 17:33:55  Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+2022-12-25 17:33:55.523660 (MainThread): 17:33:55  Partial parsing enabled, no changes found, skipping parsing
+2022-12-25 17:33:55.531377 (MainThread): 17:33:55  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '896efbf2-36d2-4753-abf4-492b6c6eb053', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d6406f4f0>]}
+2022-12-25 17:33:55.563040 (MainThread): 17:33:55  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '896efbf2-36d2-4753-abf4-492b6c6eb053', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d64188dc0>]}
+2022-12-25 17:33:55.563305 (MainThread): 17:33:55  Found 13 models, 31 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 5 seed files, 0 sources, 0 exposures, 0 metrics
+2022-12-25 17:33:55.563406 (MainThread): 17:33:55  Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '896efbf2-36d2-4753-abf4-492b6c6eb053', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d64188b80>]}
+2022-12-25 17:33:55.565345 (MainThread): 17:33:55  
+2022-12-25 17:33:55.565900 (MainThread): 17:33:55  Acquiring new bigquery connection "master"
+2022-12-25 17:33:55.567411 (ThreadPoolExecutor-0_0): 17:33:55  Acquiring new bigquery connection "list_dbt-demo-data-372717"
+2022-12-25 17:33:55.567577 (ThreadPoolExecutor-0_0): 17:33:55  Opening a new connection, currently in state init
+2022-12-25 17:33:55.692272 (Thread-41): handling poll request
+2022-12-25 17:33:55.692724 (Thread-41): 17:33:55  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec6787abe0>]}
+2022-12-25 17:33:55.693552 (Thread-41): sending response (<Response 3909 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:55.701030 (Thread-42): handling ps request
+2022-12-25 17:33:55.701302 (Thread-42): 17:33:55  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec57c04970>]}
+2022-12-25 17:33:55.701804 (Thread-42): sending response (<Response 946 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:55.713918 (Thread-43): handling status request
+2022-12-25 17:33:55.714206 (Thread-43): 17:33:55  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec57c04280>]}
+2022-12-25 17:33:55.716798 (Thread-43): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:55.779830 (ThreadPoolExecutor-1_0): 17:33:55  Acquiring new bigquery connection "list_dbt-demo-data-372717_dbt_ddemo"
+2022-12-25 17:33:55.780010 (ThreadPoolExecutor-1_0): 17:33:55  Opening a new connection, currently in state closed
+2022-12-25 17:33:55.959116 (MainThread): 17:33:55  Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '896efbf2-36d2-4753-abf4-492b6c6eb053', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5ddf119880>]}
+2022-12-25 17:33:55.959791 (MainThread): 17:33:55  Concurrency: 4 threads (target='default')
+2022-12-25 17:33:55.959918 (MainThread): 17:33:55  
+2022-12-25 17:33:55.962433 (Thread-1): 17:33:55  Began running node model.spotify.stg_songplays
+2022-12-25 17:33:55.962739 (Thread-1): 17:33:55  1 of 13 START sql view model dbt_ddemo.stg_songplays ........................... [RUN]
+2022-12-25 17:33:55.963158 (Thread-1): 17:33:55  Acquiring new bigquery connection "model.spotify.stg_songplays"
+2022-12-25 17:33:55.963272 (Thread-1): 17:33:55  Began compiling node model.spotify.stg_songplays
+2022-12-25 17:33:55.963377 (Thread-1): 17:33:55  Compiling model.spotify.stg_songplays
+2022-12-25 17:33:55.966679 (Thread-1): 17:33:55  Writing injected SQL for node "model.spotify.stg_songplays"
+2022-12-25 17:33:55.966933 (Thread-2): 17:33:55  Began running node model.spotify.stg_top_artists
+2022-12-25 17:33:55.967172 (Thread-2): 17:33:55  2 of 13 START sql view model dbt_ddemo.stg_top_artists ......................... [RUN]
+2022-12-25 17:33:55.967597 (Thread-2): 17:33:55  Acquiring new bigquery connection "model.spotify.stg_top_artists"
+2022-12-25 17:33:55.967700 (Thread-2): 17:33:55  Began compiling node model.spotify.stg_top_artists
+2022-12-25 17:33:55.967784 (Thread-2): 17:33:55  Compiling model.spotify.stg_top_artists
+2022-12-25 17:33:55.970391 (Thread-2): 17:33:55  Writing injected SQL for node "model.spotify.stg_top_artists"
+2022-12-25 17:33:55.970635 (Thread-3): 17:33:55  Began running node model.spotify.stg_top_tracks
+2022-12-25 17:33:55.970862 (Thread-3): 17:33:55  3 of 13 START sql view model dbt_ddemo.stg_top_tracks .......................... [RUN]
+2022-12-25 17:33:55.971271 (Thread-3): 17:33:55  Acquiring new bigquery connection "model.spotify.stg_top_tracks"
+2022-12-25 17:33:55.971372 (Thread-3): 17:33:55  Began compiling node model.spotify.stg_top_tracks
+2022-12-25 17:33:55.971456 (Thread-3): 17:33:55  Compiling model.spotify.stg_top_tracks
+2022-12-25 17:33:55.974236 (Thread-3): 17:33:55  Writing injected SQL for node "model.spotify.stg_top_tracks"
+2022-12-25 17:33:55.999890 (Thread-2): 17:33:55  finished collecting timing info
+2022-12-25 17:33:56.000087 (Thread-2): 17:33:56  Began executing node model.spotify.stg_top_artists
+2022-12-25 17:33:56.005685 (Thread-3): 17:33:56  finished collecting timing info
+2022-12-25 17:33:56.005839 (Thread-3): 17:33:56  Began executing node model.spotify.stg_top_tracks
+2022-12-25 17:33:56.048874 (Thread-2): 17:33:56  Writing runtime sql for node "model.spotify.stg_top_artists"
+2022-12-25 17:33:56.049099 (Thread-1): 17:33:56  finished collecting timing info
+2022-12-25 17:33:56.049251 (Thread-1): 17:33:56  Began executing node model.spotify.stg_songplays
+2022-12-25 17:33:56.051919 (Thread-3): 17:33:56  Writing runtime sql for node "model.spotify.stg_top_tracks"
+2022-12-25 17:33:56.055450 (Thread-1): 17:33:56  Writing runtime sql for node "model.spotify.stg_songplays"
+2022-12-25 17:33:56.069652 (Thread-3): 17:33:56  Opening a new connection, currently in state init
+2022-12-25 17:33:56.073973 (Thread-3): 17:33:56  On model.spotify.stg_top_tracks: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "user", "target_name": "default", "node_id": "model.spotify.stg_top_tracks"} */
+
+
+  create or replace view `dbt-demo-data-372717`.`dbt_ddemo`.`stg_top_tracks`
+  OPTIONS()
+  as -- stage_top_tracks
+with source as (
+    select
+        *
+    from `dbt-demo-data-372717`.`dbt_ddemo`.`current_user_top_tracks`
+),
+
+stage_top_tracks as (
+    select
+        track_rank,
+        track_id,
+    	track_name,
+        track_duration,
+        track_is_explicit,
+        track_popularity,
+        album_id,
+        album_name,
+        album_release_year,
+        album_type,
+        artist_name,
+        artist_name_others,
+        artist_id,
+        artist_id_others,
+        track_danceability,
+        track_energy,
+        track_key,
+        track_loudness,
+        track_mode,
+        track_speechiness,
+        track_acousticness,
+        track_instrumentalness,
+        track_liveness,
+        track_valence,
+        artist_popularity,
+        artist_followers,
+        artist_genre,
+        artist_genre_others
+    from source
+)
+select
+    *
+from stage_top_tracks;
+
+
+2022-12-25 17:33:56.074715 (Thread-2): 17:33:56  Opening a new connection, currently in state init
+2022-12-25 17:33:56.078302 (Thread-1): 17:33:56  Opening a new connection, currently in state closed
+2022-12-25 17:33:56.079154 (Thread-2): 17:33:56  On model.spotify.stg_top_artists: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "user", "target_name": "default", "node_id": "model.spotify.stg_top_artists"} */
+
+
+  create or replace view `dbt-demo-data-372717`.`dbt_ddemo`.`stg_top_artists`
+  OPTIONS()
+  as -- stage_top_artists
+with source as (
+    select
+        *
+    from `dbt-demo-data-372717`.`dbt_ddemo`.`current_user_top_artists`
+),
+
+stage_top_artists as (
+    select
+        artist_rank,
+        artist_id,
+        artist_name,
+        artist_popularity,
+        artist_followers,
+        artist_genre,
+        artist_genre_others
+    from source
+)
+select
+    *
+from stage_top_artists;
+
+
+2022-12-25 17:33:56.082589 (Thread-1): 17:33:56  On model.spotify.stg_songplays: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "user", "target_name": "default", "node_id": "model.spotify.stg_songplays"} */
+
+
+  create or replace view `dbt-demo-data-372717`.`dbt_ddemo`.`stg_songplays`
+  OPTIONS()
+  as -- stage_songplays
+with source as (
+    select 
+        *
+    from `dbt-demo-data-372717`.`dbt_ddemo`.`current_user_recently_played`
+),
+
+stage_songplays as (
+    select
+        songplays_id,
+        track_id,
+    	track_name,
+        track_duration,
+        track_is_explicit,
+        track_popularity,
+        track_played_at,
+        album_id,
+        album_name,
+        album_release_year,
+        album_type,
+        artist_name,
+        artist_name_others,
+        artist_id,
+        artist_id_others,
+        track_danceability,
+        track_energy,
+        track_key,
+        track_loudness,
+        track_mode,
+        track_speechiness,
+        track_acousticness,
+        track_instrumentalness,
+        track_liveness,
+        track_valence,
+        artist_popularity,
+        artist_followers,
+        artist_genre,
+        artist_genre_others
+    from source
+)
+select
+    *
+from stage_songplays;
+
+
+2022-12-25 17:33:56.784286 (Thread-2): 17:33:56  BigQuery adapter: https://console.cloud.google.com/bigquery?project=dbt-demo-data-372717&j=bq:9d8308e9-0b84-4535-9123-3be43b31d353:US&page=queryresults
+2022-12-25 17:33:56.799490 (Thread-2): 17:33:56  finished collecting timing info
+2022-12-25 17:33:56.800101 (Thread-2): 17:33:56  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '896efbf2-36d2-4753-abf4-492b6c6eb053', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d406ca910>]}
+2022-12-25 17:33:56.800459 (Thread-2): 17:33:56  2 of 13 OK created sql view model dbt_ddemo.stg_top_artists .................... [CREATE VIEW (0 processed) in 0.83s]
+2022-12-25 17:33:56.800693 (Thread-2): 17:33:56  Finished running node model.spotify.stg_top_artists
+2022-12-25 17:33:56.802024 (Thread-4): 17:33:56  Began running node model.spotify.fct_top_artists
+2022-12-25 17:33:56.802285 (Thread-4): 17:33:56  4 of 13 START sql table model dbt_ddemo.fct_top_artists ........................ [RUN]
+2022-12-25 17:33:56.802714 (Thread-4): 17:33:56  Acquiring new bigquery connection "model.spotify.fct_top_artists"
+2022-12-25 17:33:56.802822 (Thread-4): 17:33:56  Began compiling node model.spotify.fct_top_artists
+2022-12-25 17:33:56.802912 (Thread-4): 17:33:56  Compiling model.spotify.fct_top_artists
+2022-12-25 17:33:56.805654 (Thread-4): 17:33:56  Writing injected SQL for node "model.spotify.fct_top_artists"
+2022-12-25 17:33:56.823682 (Thread-4): 17:33:56  finished collecting timing info
+2022-12-25 17:33:56.823850 (Thread-4): 17:33:56  Began executing node model.spotify.fct_top_artists
+2022-12-25 17:33:56.849541 (Thread-4): 17:33:56  Writing runtime sql for node "model.spotify.fct_top_artists"
+2022-12-25 17:33:56.866902 (Thread-4): 17:33:56  Opening a new connection, currently in state init
+2022-12-25 17:33:56.871278 (Thread-4): 17:33:56  On model.spotify.fct_top_artists: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "user", "target_name": "default", "node_id": "model.spotify.fct_top_artists"} */
+
+  
+    
+
+    create or replace table `dbt-demo-data-372717`.`dbt_ddemo`.`fct_top_artists`
+    
+    
+    OPTIONS()
+    as (
+      -- top_artists table
+with source as (
+    select
+        *
+    from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_top_artists`
+),
+fact_top_artists as (
+    select
+        artist_rank,
+        artist_id
+    from source
+)
+select
+    *
+from fact_top_artists
+    );
+  
+2022-12-25 17:33:56.907329 (Thread-44): handling poll request
+2022-12-25 17:33:56.907696 (Thread-44): 17:33:56  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec35125a90>]}
+2022-12-25 17:33:56.908736 (Thread-44): sending response (<Response 25217 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:56.916997 (Thread-1): 17:33:56  BigQuery adapter: https://console.cloud.google.com/bigquery?project=dbt-demo-data-372717&j=bq:e07e6f94-8da1-4aa9-8abd-bd1123209382:US&page=queryresults
+2022-12-25 17:33:56.918264 (Thread-1): 17:33:56  finished collecting timing info
+2022-12-25 17:33:56.918818 (Thread-1): 17:33:56  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '896efbf2-36d2-4753-abf4-492b6c6eb053', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d405b9b50>]}
+2022-12-25 17:33:56.919164 (Thread-1): 17:33:56  1 of 13 OK created sql view model dbt_ddemo.stg_songplays ...................... [CREATE VIEW (0 processed) in 0.96s]
+2022-12-25 17:33:56.919402 (Thread-1): 17:33:56  Finished running node model.spotify.stg_songplays
+2022-12-25 17:33:56.920450 (Thread-2): 17:33:56  Began running node model.spotify.fct_songplays
+2022-12-25 17:33:56.920700 (Thread-2): 17:33:56  5 of 13 START sql table model dbt_ddemo.fct_songplays .......................... [RUN]
+2022-12-25 17:33:56.921084 (Thread-2): 17:33:56  Acquiring new bigquery connection "model.spotify.fct_songplays"
+2022-12-25 17:33:56.921189 (Thread-2): 17:33:56  Began compiling node model.spotify.fct_songplays
+2022-12-25 17:33:56.921280 (Thread-2): 17:33:56  Compiling model.spotify.fct_songplays
+2022-12-25 17:33:56.924190 (Thread-2): 17:33:56  Writing injected SQL for node "model.spotify.fct_songplays"
+2022-12-25 17:33:56.927342 (Thread-3): 17:33:56  BigQuery adapter: https://console.cloud.google.com/bigquery?project=dbt-demo-data-372717&j=bq:b5f41eea-29ed-4d93-8319-31fb4acc45ff:US&page=queryresults
+2022-12-25 17:33:56.928404 (Thread-3): 17:33:56  finished collecting timing info
+2022-12-25 17:33:56.928898 (Thread-3): 17:33:56  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '896efbf2-36d2-4753-abf4-492b6c6eb053', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d4172e5e0>]}
+2022-12-25 17:33:56.929193 (Thread-3): 17:33:56  3 of 13 OK created sql view model dbt_ddemo.stg_top_tracks ..................... [CREATE VIEW (0 processed) in 0.96s]
+2022-12-25 17:33:56.929398 (Thread-3): 17:33:56  Finished running node model.spotify.stg_top_tracks
+2022-12-25 17:33:56.930092 (Thread-1): 17:33:56  Began running node model.spotify.dim_albums
+2022-12-25 17:33:56.930329 (Thread-1): 17:33:56  6 of 13 START sql table model dbt_ddemo.dim_albums ............................. [RUN]
+2022-12-25 17:33:56.930679 (Thread-1): 17:33:56  Acquiring new bigquery connection "model.spotify.dim_albums"
+2022-12-25 17:33:56.930779 (Thread-1): 17:33:56  Began compiling node model.spotify.dim_albums
+2022-12-25 17:33:56.930865 (Thread-1): 17:33:56  Compiling model.spotify.dim_albums
+2022-12-25 17:33:56.934584 (Thread-1): 17:33:56  Writing injected SQL for node "model.spotify.dim_albums"
+2022-12-25 17:33:56.934857 (Thread-3): 17:33:56  Began running node model.spotify.dim_artists
+2022-12-25 17:33:56.935065 (Thread-3): 17:33:56  7 of 13 START sql table model dbt_ddemo.dim_artists ............................ [RUN]
+2022-12-25 17:33:56.935415 (Thread-3): 17:33:56  Acquiring new bigquery connection "model.spotify.dim_artists"
+2022-12-25 17:33:56.935523 (Thread-3): 17:33:56  Began compiling node model.spotify.dim_artists
+2022-12-25 17:33:56.935628 (Thread-3): 17:33:56  Compiling model.spotify.dim_artists
+2022-12-25 17:33:56.939027 (Thread-3): 17:33:56  Writing injected SQL for node "model.spotify.dim_artists"
+2022-12-25 17:33:56.943232 (Thread-2): 17:33:56  finished collecting timing info
+2022-12-25 17:33:56.943383 (Thread-2): 17:33:56  Began executing node model.spotify.fct_songplays
+2022-12-25 17:33:56.947650 (Thread-1): 17:33:56  finished collecting timing info
+2022-12-25 17:33:56.947801 (Thread-1): 17:33:56  Began executing node model.spotify.dim_albums
+2022-12-25 17:33:56.950024 (Thread-1): 17:33:56  Writing runtime sql for node "model.spotify.dim_albums"
+2022-12-25 17:33:56.952528 (Thread-2): 17:33:56  Writing runtime sql for node "model.spotify.fct_songplays"
+2022-12-25 17:33:56.952787 (Thread-3): 17:33:56  finished collecting timing info
+2022-12-25 17:33:56.952930 (Thread-3): 17:33:56  Began executing node model.spotify.dim_artists
+2022-12-25 17:33:56.955403 (Thread-3): 17:33:56  Writing runtime sql for node "model.spotify.dim_artists"
+2022-12-25 17:33:56.963417 (Thread-1): 17:33:56  Opening a new connection, currently in state closed
+2022-12-25 17:33:56.967575 (Thread-2): 17:33:56  Opening a new connection, currently in state closed
+2022-12-25 17:33:56.967967 (Thread-1): 17:33:56  On model.spotify.dim_albums: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "user", "target_name": "default", "node_id": "model.spotify.dim_albums"} */
+
+  
+    
+
+    create or replace table `dbt-demo-data-372717`.`dbt_ddemo`.`dim_albums`
+    
+    
+    OPTIONS()
+    as (
+      -- albums table
+
+
+
+    select distinct
+        album_id,
+        album_name,
+        album_release_year,
+        album_type                                   
+    from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_songplays`
+    union
+
+    select distinct
+        album_id,
+        album_name,
+        album_release_year,
+        album_type                                   
+    from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_top_tracks`
+    
+
+    );
+  
+2022-12-25 17:33:56.971239 (Thread-3): 17:33:56  Opening a new connection, currently in state closed
+2022-12-25 17:33:56.972956 (Thread-2): 17:33:56  On model.spotify.fct_songplays: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "user", "target_name": "default", "node_id": "model.spotify.fct_songplays"} */
+
+  
+    
+
+    create or replace table `dbt-demo-data-372717`.`dbt_ddemo`.`fct_songplays`
+    
+    
+    OPTIONS()
+    as (
+      -- songplays table
+with source as (
+    select
+        *
+    from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_songplays`
+),
+fact_songplays as (
+    select
+        songplays_id,
+        track_id,
+        track_played_at,
+        album_id,
+        artist_id,
+        artist_id_others,
+        artist_name_others
+    from source
+)
+select
+    *
+from fact_songplays
+    );
+  
+2022-12-25 17:33:56.975656 (Thread-3): 17:33:56  On model.spotify.dim_artists: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "user", "target_name": "default", "node_id": "model.spotify.dim_artists"} */
+
+  
+    
+
+    create or replace table `dbt-demo-data-372717`.`dbt_ddemo`.`dim_artists`
+    
+    
+    OPTIONS()
+    as (
+      -- artists table
+
+
+
+    select distinct
+        artist_id,
+        artist_name,
+        artist_popularity,
+        artist_followers,
+        artist_genre,
+        artist_genre_others                                     
+    from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_songplays`
+    union
+
+    select distinct
+        artist_id,
+        artist_name,
+        artist_popularity,
+        artist_followers,
+        artist_genre,
+        artist_genre_others                                     
+    from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_top_artists`
+    union
+
+    select distinct
+        artist_id,
+        artist_name,
+        artist_popularity,
+        artist_followers,
+        artist_genre,
+        artist_genre_others                                     
+    from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_top_tracks`
+    
+
+    );
+  
+2022-12-25 17:33:57.166255 (Thread-1): 17:33:57  BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Syntax error: Expected keyword ALL or keyword DISTINCT but got keyword SELECT at [23:5]')
+2022-12-25 17:33:57.168504 (Thread-3): 17:33:57  BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Syntax error: Expected keyword ALL or keyword DISTINCT but got keyword SELECT at [25:5]')
+2022-12-25 17:33:57.447836 (Thread-1): 17:33:57  BigQuery adapter: https://console.cloud.google.com/bigquery?project=dbt-demo-data-372717&j=bq:US:74043bee-b2e6-41a5-8be4-5ca1eab90b65&page=queryresults
+2022-12-25 17:33:57.448094 (Thread-1): 17:33:57  finished collecting timing info
+2022-12-25 17:33:57.448653 (Thread-1): 17:33:57  Database Error in model dim_albums (models/mart/dim_albums.sql)
+  Syntax error: Expected keyword ALL or keyword DISTINCT but got keyword SELECT at [23:5]
+  compiled Code at target/run/spotify/models/mart/dim_albums.sql
+2022-12-25 17:33:57.448883 (Thread-1): 17:33:57  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '896efbf2-36d2-4753-abf4-492b6c6eb053', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d4058b790>]}
+2022-12-25 17:33:57.449395 (Thread-1): 17:33:57  6 of 13 ERROR creating sql table model dbt_ddemo.dim_albums .................... [ERROR in 0.52s]
+2022-12-25 17:33:57.449659 (Thread-1): 17:33:57  Finished running node model.spotify.dim_albums
+2022-12-25 17:33:57.449831 (Thread-1): 17:33:57  Began running node model.spotify.dim_tracks
+2022-12-25 17:33:57.450024 (Thread-1): 17:33:57  8 of 13 START sql table model dbt_ddemo.dim_tracks ............................. [RUN]
+2022-12-25 17:33:57.450434 (Thread-1): 17:33:57  Acquiring new bigquery connection "model.spotify.dim_tracks"
+2022-12-25 17:33:57.450538 (Thread-1): 17:33:57  Began compiling node model.spotify.dim_tracks
+2022-12-25 17:33:57.451201 (Thread-1): 17:33:57  Compiling model.spotify.dim_tracks
+2022-12-25 17:33:57.455147 (Thread-1): 17:33:57  Writing injected SQL for node "model.spotify.dim_tracks"
+2022-12-25 17:33:57.466560 (Thread-1): 17:33:57  finished collecting timing info
+2022-12-25 17:33:57.466710 (Thread-1): 17:33:57  Began executing node model.spotify.dim_tracks
+2022-12-25 17:33:57.469188 (Thread-1): 17:33:57  Writing runtime sql for node "model.spotify.dim_tracks"
+2022-12-25 17:33:57.478719 (Thread-1): 17:33:57  Opening a new connection, currently in state closed
+2022-12-25 17:33:57.483083 (Thread-1): 17:33:57  On model.spotify.dim_tracks: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "user", "target_name": "default", "node_id": "model.spotify.dim_tracks"} */
+
+  
+    
+
+    create or replace table `dbt-demo-data-372717`.`dbt_ddemo`.`dim_tracks`
+    
+    
+    OPTIONS()
+    as (
+      -- tracks table
+
+
+
+    select distinct
+        track_id,
+        track_name,
+        track_duration,
+        track_is_explicit,
+        track_popularity,
+        track_danceability,
+        track_energy,
+        track_key,
+        track_loudness,
+        track_mode,
+        track_speechiness,
+        track_acousticness,
+        track_instrumentalness,
+        track_liveness,
+        track_valence
+    from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_songplays`
+    union
+
+    select distinct
+        track_id,
+        track_name,
+        track_duration,
+        track_is_explicit,
+        track_popularity,
+        track_danceability,
+        track_energy,
+        track_key,
+        track_loudness,
+        track_mode,
+        track_speechiness,
+        track_acousticness,
+        track_instrumentalness,
+        track_liveness,
+        track_valence
+    from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_top_tracks`
+    
+
+    );
+  
+2022-12-25 17:33:57.618669 (Thread-1): 17:33:57  BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Syntax error: Expected keyword ALL or keyword DISTINCT but got keyword SELECT at [34:5]')
+2022-12-25 17:33:57.889171 (Thread-45): handling ps request
+2022-12-25 17:33:57.889571 (Thread-45): 17:33:57  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec35083640>]}
+2022-12-25 17:33:57.890125 (Thread-45): sending response (<Response 946 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:58.158035 (Thread-46): handling status request
+2022-12-25 17:33:58.158435 (Thread-46): 17:33:58  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec350835e0>]}
+2022-12-25 17:33:58.159807 (Thread-46): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:58.160209 (Thread-3): 17:33:58  BigQuery adapter: https://console.cloud.google.com/bigquery?project=dbt-demo-data-372717&j=bq:US:7aedb5b8-b0fd-42a8-9246-988f0035afa5&page=queryresults
+2022-12-25 17:33:58.160461 (Thread-3): 17:33:58  finished collecting timing info
+2022-12-25 17:33:58.161012 (Thread-3): 17:33:58  Database Error in model dim_artists (models/mart/dim_artists.sql)
+  Syntax error: Expected keyword ALL or keyword DISTINCT but got keyword SELECT at [25:5]
+  compiled Code at target/run/spotify/models/mart/dim_artists.sql
+2022-12-25 17:33:58.161209 (Thread-3): 17:33:58  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '896efbf2-36d2-4753-abf4-492b6c6eb053', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d4051cc10>]}
+2022-12-25 17:33:58.161542 (Thread-3): 17:33:58  7 of 13 ERROR creating sql table model dbt_ddemo.dim_artists ................... [ERROR in 1.23s]
+2022-12-25 17:33:58.161800 (Thread-3): 17:33:58  Finished running node model.spotify.dim_artists
+2022-12-25 17:33:58.161955 (Thread-3): 17:33:58  Began running node model.spotify.fct_top_tracks
+2022-12-25 17:33:58.162149 (Thread-3): 17:33:58  9 of 13 START sql table model dbt_ddemo.fct_top_tracks ......................... [RUN]
+2022-12-25 17:33:58.162550 (Thread-3): 17:33:58  Acquiring new bigquery connection "model.spotify.fct_top_tracks"
+2022-12-25 17:33:58.162658 (Thread-3): 17:33:58  Began compiling node model.spotify.fct_top_tracks
+2022-12-25 17:33:58.162747 (Thread-3): 17:33:58  Compiling model.spotify.fct_top_tracks
+2022-12-25 17:33:58.165858 (Thread-3): 17:33:58  Writing injected SQL for node "model.spotify.fct_top_tracks"
+2022-12-25 17:33:58.173758 (Thread-47): handling poll request
+2022-12-25 17:33:58.174044 (Thread-47): 17:33:58  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec35083a00>]}
+2022-12-25 17:33:58.175207 (Thread-47): sending response (<Response 35546 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:58.175324 (Thread-3): 17:33:58  finished collecting timing info
+2022-12-25 17:33:58.175491 (Thread-3): 17:33:58  Began executing node model.spotify.fct_top_tracks
+2022-12-25 17:33:58.178300 (Thread-3): 17:33:58  Writing runtime sql for node "model.spotify.fct_top_tracks"
+2022-12-25 17:33:58.188725 (Thread-3): 17:33:58  Opening a new connection, currently in state closed
+2022-12-25 17:33:58.193067 (Thread-3): 17:33:58  On model.spotify.fct_top_tracks: /* {"app": "dbt", "dbt_version": "1.3.1", "profile_name": "user", "target_name": "default", "node_id": "model.spotify.fct_top_tracks"} */
+
+  
+    
+
+    create or replace table `dbt-demo-data-372717`.`dbt_ddemo`.`fct_top_tracks`
+    
+    
+    OPTIONS()
+    as (
+      -- top_tracks table
+with source as (
+    select
+        *
+    from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_top_tracks`
+),
+fact_top_tracks as (
+    select
+        track_rank,
+        track_id,
+        album_id,
+        artist_name_others,
+        artist_id,
+        artist_id_others
+    from source
+)
+select
+    *
+from fact_top_tracks
+    );
+  
+2022-12-25 17:33:58.426876 (Thread-1): 17:33:58  BigQuery adapter: https://console.cloud.google.com/bigquery?project=dbt-demo-data-372717&j=bq:US:cb0c137e-29ed-4ad2-b0a9-1ffc880b867d&page=queryresults
+2022-12-25 17:33:58.427127 (Thread-1): 17:33:58  finished collecting timing info
+2022-12-25 17:33:58.427718 (Thread-1): 17:33:58  Database Error in model dim_tracks (models/mart/dim_tracks.sql)
+  Syntax error: Expected keyword ALL or keyword DISTINCT but got keyword SELECT at [34:5]
+  compiled Code at target/run/spotify/models/mart/dim_tracks.sql
+2022-12-25 17:33:58.427923 (Thread-1): 17:33:58  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '896efbf2-36d2-4753-abf4-492b6c6eb053', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d404e2e80>]}
+2022-12-25 17:33:58.428404 (Thread-1): 17:33:58  8 of 13 ERROR creating sql table model dbt_ddemo.dim_tracks .................... [ERROR in 0.98s]
+2022-12-25 17:33:58.428678 (Thread-1): 17:33:58  Finished running node model.spotify.dim_tracks
+2022-12-25 17:33:59.042527 (Thread-2): 17:33:59  BigQuery adapter: https://console.cloud.google.com/bigquery?project=dbt-demo-data-372717&j=bq:6872056e-d707-4811-bfc1-cbc66276ed26:US&page=queryresults
+2022-12-25 17:33:59.043730 (Thread-2): 17:33:59  finished collecting timing info
+2022-12-25 17:33:59.044310 (Thread-2): 17:33:59  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '896efbf2-36d2-4753-abf4-492b6c6eb053', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d405c8cd0>]}
+2022-12-25 17:33:59.044815 (Thread-2): 17:33:59  5 of 13 OK created sql table model dbt_ddemo.fct_songplays ..................... [CREATE TABLE (50.0 rows, 4.5 KB processed) in 2.12s]
+2022-12-25 17:33:59.045076 (Thread-2): 17:33:59  Finished running node model.spotify.fct_songplays
+2022-12-25 17:33:59.046149 (Thread-1): 17:33:59  Began running node model.spotify.vw_songplays_albums
+2022-12-25 17:33:59.046324 (Thread-1): 17:33:59  10 of 13 SKIP relation dbt_ddemo.vw_songplays_albums ........................... [SKIP]
+2022-12-25 17:33:59.046521 (Thread-1): 17:33:59  Finished running node model.spotify.vw_songplays_albums
+2022-12-25 17:33:59.046650 (Thread-1): 17:33:59  Began running node model.spotify.vw_songplays_genres
+2022-12-25 17:33:59.046759 (Thread-1): 17:33:59  11 of 13 SKIP relation dbt_ddemo.vw_songplays_genres ........................... [SKIP]
+2022-12-25 17:33:59.046950 (Thread-1): 17:33:59  Finished running node model.spotify.vw_songplays_genres
+2022-12-25 17:33:59.368115 (Thread-48): handling poll request
+2022-12-25 17:33:59.368563 (Thread-48): 17:33:59  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34f7c430>]}
+2022-12-25 17:33:59.369284 (Thread-48): sending response (<Response 11287 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:33:59.708823 (Thread-4): 17:33:59  BigQuery adapter: https://console.cloud.google.com/bigquery?project=dbt-demo-data-372717&j=bq:55935db2-68ec-4c6b-b531-c93b791728aa:US&page=queryresults
+2022-12-25 17:33:59.710096 (Thread-4): 17:33:59  finished collecting timing info
+2022-12-25 17:33:59.710677 (Thread-4): 17:33:59  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '896efbf2-36d2-4753-abf4-492b6c6eb053', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d4062cee0>]}
+2022-12-25 17:33:59.711036 (Thread-4): 17:33:59  4 of 13 OK created sql table model dbt_ddemo.fct_top_artists ................... [CREATE TABLE (50.0 rows, 1.6 KB processed) in 2.91s]
+2022-12-25 17:33:59.711273 (Thread-4): 17:33:59  Finished running node model.spotify.fct_top_artists
+2022-12-25 17:33:59.712073 (Thread-1): 17:33:59  Began running node model.spotify.vw_top_artist_genres
+2022-12-25 17:33:59.712262 (Thread-1): 17:33:59  12 of 13 SKIP relation dbt_ddemo.vw_top_artist_genres .......................... [SKIP]
+2022-12-25 17:33:59.712451 (Thread-1): 17:33:59  Finished running node model.spotify.vw_top_artist_genres
+2022-12-25 17:34:00.108801 (Thread-49): handling ps request
+2022-12-25 17:34:00.109208 (Thread-49): 17:34:00  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34f0e0a0>]}
+2022-12-25 17:34:00.109765 (Thread-49): sending response (<Response 946 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:34:00.262915 (Thread-3): 17:34:00  BigQuery adapter: https://console.cloud.google.com/bigquery?project=dbt-demo-data-372717&j=bq:ed850b18-639c-4979-a3ab-b94f5f13d0d4:US&page=queryresults
+2022-12-25 17:34:00.264135 (Thread-3): 17:34:00  finished collecting timing info
+2022-12-25 17:34:00.264847 (Thread-3): 17:34:00  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '896efbf2-36d2-4753-abf4-492b6c6eb053', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5d404d1940>]}
+2022-12-25 17:34:00.265205 (Thread-3): 17:34:00  9 of 13 OK created sql table model dbt_ddemo.fct_top_tracks .................... [CREATE TABLE (50.0 rows, 4.4 KB processed) in 2.10s]
+2022-12-25 17:34:00.265442 (Thread-3): 17:34:00  Finished running node model.spotify.fct_top_tracks
+2022-12-25 17:34:00.266501 (Thread-4): 17:34:00  Began running node model.spotify.vw_top_track_genres
+2022-12-25 17:34:00.266695 (Thread-4): 17:34:00  13 of 13 SKIP relation dbt_ddemo.vw_top_track_genres ........................... [SKIP]
+2022-12-25 17:34:00.266885 (Thread-4): 17:34:00  Finished running node model.spotify.vw_top_track_genres
+2022-12-25 17:34:00.268322 (MainThread): 17:34:00  Acquiring new bigquery connection "master"
+2022-12-25 17:34:00.268827 (MainThread): 17:34:00  
+2022-12-25 17:34:00.268928 (MainThread): 17:34:00  Finished running 7 view models, 6 table models in 0 hours 0 minutes and 4.70 seconds (4.70s).
+2022-12-25 17:34:00.269010 (MainThread): 17:34:00  Connection 'master' was properly closed.
+2022-12-25 17:34:00.269078 (MainThread): 17:34:00  Connection 'model.spotify.dim_tracks' was properly closed.
+2022-12-25 17:34:00.269142 (MainThread): 17:34:00  Connection 'model.spotify.fct_songplays' was properly closed.
+2022-12-25 17:34:00.269205 (MainThread): 17:34:00  Connection 'model.spotify.fct_top_tracks' was properly closed.
+2022-12-25 17:34:00.269268 (MainThread): 17:34:00  Connection 'model.spotify.fct_top_artists' was properly closed.
+2022-12-25 17:34:00.290615 (Thread-50): handling status request
+2022-12-25 17:34:00.290984 (Thread-50): 17:34:00  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d531bb0>]}
+2022-12-25 17:34:00.292519 (Thread-50): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:34:00.333932 (MainThread): 17:34:00  
+2022-12-25 17:34:00.334136 (MainThread): 17:34:00  Completed with 3 errors and 0 warnings:
+2022-12-25 17:34:00.334225 (MainThread): 17:34:00  
+2022-12-25 17:34:00.334315 (MainThread): 17:34:00  Database Error in model dim_albums (models/mart/dim_albums.sql)
+2022-12-25 17:34:00.334392 (MainThread): 17:34:00    Syntax error: Expected keyword ALL or keyword DISTINCT but got keyword SELECT at [23:5]
+2022-12-25 17:34:00.334462 (MainThread): 17:34:00    compiled Code at target/run/spotify/models/mart/dim_albums.sql
+2022-12-25 17:34:00.334534 (MainThread): 17:34:00  
+2022-12-25 17:34:00.334611 (MainThread): 17:34:00  Database Error in model dim_artists (models/mart/dim_artists.sql)
+2022-12-25 17:34:00.334680 (MainThread): 17:34:00    Syntax error: Expected keyword ALL or keyword DISTINCT but got keyword SELECT at [25:5]
+2022-12-25 17:34:00.334745 (MainThread): 17:34:00    compiled Code at target/run/spotify/models/mart/dim_artists.sql
+2022-12-25 17:34:00.334813 (MainThread): 17:34:00  
+2022-12-25 17:34:00.334886 (MainThread): 17:34:00  Database Error in model dim_tracks (models/mart/dim_tracks.sql)
+2022-12-25 17:34:00.334953 (MainThread): 17:34:00    Syntax error: Expected keyword ALL or keyword DISTINCT but got keyword SELECT at [34:5]
+2022-12-25 17:34:00.335017 (MainThread): 17:34:00    compiled Code at target/run/spotify/models/mart/dim_tracks.sql
+2022-12-25 17:34:00.335101 (MainThread): 17:34:00  
+2022-12-25 17:34:00.335178 (MainThread): 17:34:00  Done. PASS=6 WARN=0 ERROR=3 SKIP=4 TOTAL=13
+2022-12-25 17:34:00.568311 (Thread-51): handling poll request
+2022-12-25 17:34:00.568723 (Thread-51): 17:34:00  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d49bb20>]}
+2022-12-25 17:34:00.569679 (Thread-51): sending response (<Response 17766 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:34:01.771003 (Thread-52): handling poll request
+2022-12-25 17:34:01.771403 (Thread-52): 17:34:01  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d49baf0>]}
+2022-12-25 17:34:01.773484 (Thread-52): sending response (<Response 46860 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:34:02.312452 (Thread-53): handling ps request
+2022-12-25 17:34:02.312871 (Thread-53): 17:34:02  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d49bc40>]}
+2022-12-25 17:34:02.313417 (Thread-53): sending response (<Response 970 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:34:02.574765 (Thread-54): handling status request
+2022-12-25 17:34:02.575194 (Thread-54): 17:34:02  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d49bf70>]}
+2022-12-25 17:34:02.576497 (Thread-54): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:35:46.476854 (Thread-55): handling status request
+2022-12-25 17:35:46.478517 (Thread-55): 17:35:46  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d49bcd0>]}
+2022-12-25 17:35:46.479811 (Thread-55): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:05.412104 (Thread-56): handling ps request
+2022-12-25 17:36:05.412522 (Thread-56): 17:36:05  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d4a1100>]}
+2022-12-25 17:36:05.413062 (Thread-56): sending response (<Response 970 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:05.519419 (Thread-57): handling status request
+2022-12-25 17:36:05.519791 (Thread-57): 17:36:05  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d4a13d0>]}
+2022-12-25 17:36:05.521039 (Thread-57): sending response (<Response 33722 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:05.528506 (Thread-58): handling list request
+2022-12-25 17:36:05.528815 (Thread-58): 17:36:05  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d47dd00>]}
+2022-12-25 17:36:05.537746 (Thread-59): handling ps request
+2022-12-25 17:36:05.538114 (Thread-59): 17:36:05  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d4a7160>]}
+2022-12-25 17:36:05.538755 (Thread-59): sending response (<Response 1242 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:05.546037 (Thread-60): handling status request
+2022-12-25 17:36:05.546193 (Thread-60): 17:36:05  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d4a7ca0>]}
+2022-12-25 17:36:05.547350 (Thread-60): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:05.564194 (Thread-58): 17:36:05  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d4a1b20>]}
+2022-12-25 17:36:05.564462 (Thread-58): 17:36:05  Found 13 models, 31 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 5 seed files, 0 sources, 0 exposures, 0 metrics
+2022-12-25 17:36:05.564587 (Thread-58): 17:36:05  Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec676776a0>]}
+2022-12-25 17:36:05.570029 (Thread-58): sending response (<Response 16208 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:27.972757 (Thread-61): handling status request
+2022-12-25 17:36:27.973241 (Thread-61): 17:36:27  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d49bb20>]}
+2022-12-25 17:36:27.974608 (Thread-61): sending response (<Response 33722 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:27.979282 (Thread-62): handling list request
+2022-12-25 17:36:27.979561 (Thread-62): 17:36:27  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d4a7b80>]}
+2022-12-25 17:36:28.004066 (Thread-62): 17:36:28  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d4a12b0>]}
+2022-12-25 17:36:28.004491 (Thread-62): 17:36:28  Found 13 models, 31 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 5 seed files, 0 sources, 0 exposures, 0 metrics
+2022-12-25 17:36:28.004752 (Thread-62): 17:36:28  Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d4a1fd0>]}
+2022-12-25 17:36:28.010463 (Thread-62): sending response (<Response 26161 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:33.770641 (Thread-63): handling run_sql request
+2022-12-25 17:36:33.771049 (Thread-63): 17:36:33  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d432730>]}
+2022-12-25 17:36:33.818673 (Thread-64): handling ps request
+2022-12-25 17:36:33.820898 (Thread-65): handling ps request
+2022-12-25 17:36:33.823625 (Thread-64): 17:36:33  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d439790>]}
+2022-12-25 17:36:33.825996 (Thread-64): sending response (<Response 2022 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:33.826229 (Thread-65): 17:36:33  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d3f3610>]}
+2022-12-25 17:36:33.856171 (Thread-65): sending response (<Response 2022 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:34.047766 (Thread-66): handling poll request
+2022-12-25 17:36:34.048155 (Thread-66): 17:36:34  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d439ac0>]}
+2022-12-25 17:36:34.048662 (Thread-66): sending response (<Response 376 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:34.276722 (Thread-67): handling status request
+2022-12-25 17:36:34.277113 (Thread-67): 17:36:34  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d439610>]}
+2022-12-25 17:36:34.278701 (Thread-67): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:34.286355 (Thread-68): handling ps request
+2022-12-25 17:36:34.286622 (Thread-68): 17:36:34  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d3fc4f0>]}
+2022-12-25 17:36:34.287119 (Thread-68): sending response (<Response 2022 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:36.234099 (Thread-69): handling poll request
+2022-12-25 17:36:36.234503 (Thread-69): 17:36:36  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d3fc5b0>]}
+2022-12-25 17:36:36.234983 (Thread-69): sending response (<Response 377 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:36.419783 (Thread-63): sending response (<Response 133 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:36.421919 (Thread-70): handling status request
+2022-12-25 17:36:36.422315 (Thread-70): 17:36:36  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec353097f0>]}
+2022-12-25 17:36:36.423596 (Thread-70): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:36.450780 (MainThread): 17:36:36  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '40a0e33c-0684-4a29-942a-57fb09b6ec74', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc27c553970>]}
+2022-12-25 17:36:36.451294 (MainThread): 17:36:36  Found 13 models, 31 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 5 seed files, 0 sources, 0 exposures, 0 metrics
+2022-12-25 17:36:36.451931 (Thread-1): 17:36:36  Acquiring new bigquery connection "rpc.spotify.request"
+2022-12-25 17:36:36.452059 (Thread-1): 17:36:36  Began compiling node rpc.spotify.request
+2022-12-25 17:36:36.452156 (Thread-1): 17:36:36  Compiling rpc.spotify.request
+2022-12-25 17:36:36.454693 (Thread-1): 17:36:36  finished collecting timing info
+2022-12-25 17:36:36.454828 (Thread-1): 17:36:36  Began executing node rpc.spotify.request
+2022-12-25 17:36:36.454931 (Thread-1): 17:36:36  Opening a new connection, currently in state init
+2022-12-25 17:36:36.459489 (Thread-1): 17:36:36  On rpc.spotify.request: -- stage_songplays
+with source as (
+    select 
+        *
+    from `dbt-demo-data-372717`.`dbt_ddemo`.`current_user_recently_played`
+),
+
+stage_songplays as (
+    select
+        songplays_id,
+        track_id,
+    	track_name,
+        track_duration,
+        track_is_explicit,
+        track_popularity,
+        track_played_at,
+        album_id,
+        album_name,
+        album_release_year,
+        album_type,
+        artist_name,
+        artist_name_others,
+        artist_id,
+        artist_id_others,
+        track_danceability,
+        track_energy,
+        track_key,
+        track_loudness,
+        track_mode,
+        track_speechiness,
+        track_acousticness,
+        track_instrumentalness,
+        track_liveness,
+        track_valence,
+        artist_popularity,
+        artist_followers,
+        artist_genre,
+        artist_genre_others
+    from source
+)
+select
+    *
+from stage_songplays
+limit 500
+/* limit added automatically by dbt cloud */
+2022-12-25 17:36:36.602451 (Thread-71): handling ps request
+2022-12-25 17:36:36.602884 (Thread-71): 17:36:36  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d439910>]}
+2022-12-25 17:36:36.603495 (Thread-71): sending response (<Response 2017 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:36.609814 (Thread-72): handling ps request
+2022-12-25 17:36:36.610082 (Thread-72): 17:36:36  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d3fcc10>]}
+2022-12-25 17:36:36.610544 (Thread-72): sending response (<Response 2017 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:36.836496 (Thread-73): handling status request
+2022-12-25 17:36:36.836908 (Thread-73): 17:36:36  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d3fcac0>]}
+2022-12-25 17:36:36.838241 (Thread-73): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:36.844522 (Thread-74): handling poll request
+2022-12-25 17:36:36.844796 (Thread-74): 17:36:36  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d3fc970>]}
+2022-12-25 17:36:36.845260 (Thread-74): sending response (<Response 4393 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:37.482767 (Thread-1): 17:36:37  BigQuery adapter: https://console.cloud.google.com/bigquery?project=dbt-demo-data-372717&j=bq:0063cbdf-9618-45f0-817b-ea941c5211ff:US&page=queryresults
+2022-12-25 17:36:37.483104 (Thread-1): 17:36:37  finished collecting timing info
+2022-12-25 17:36:38.097774 (Thread-75): handling poll request
+2022-12-25 17:36:38.098267 (Thread-75): 17:36:38  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d40f280>]}
+2022-12-25 17:36:38.100419 (Thread-75): sending response (<Response 25110 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:38.436502 (Thread-76): handling poll request
+2022-12-25 17:36:38.436900 (Thread-76): 17:36:38  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d40fa60>]}
+2022-12-25 17:36:38.438823 (Thread-76): sending response (<Response 29133 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:38.729668 (Thread-77): handling status request
+2022-12-25 17:36:38.730068 (Thread-77): 17:36:38  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d40fdf0>]}
+2022-12-25 17:36:38.731346 (Thread-77): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:38.740050 (Thread-78): handling ps request
+2022-12-25 17:36:38.740323 (Thread-78): 17:36:38  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe030f220>]}
+2022-12-25 17:36:38.740835 (Thread-78): sending response (<Response 2042 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:38.874610 (Thread-79): handling ps request
+2022-12-25 17:36:38.875004 (Thread-79): 17:36:38  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe030f400>]}
+2022-12-25 17:36:38.875606 (Thread-79): sending response (<Response 2042 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:39.052419 (Thread-80): handling status request
+2022-12-25 17:36:39.052819 (Thread-80): 17:36:39  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe030f760>]}
+2022-12-25 17:36:39.054123 (Thread-80): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:48.665857 (Thread-81): handling status request
+2022-12-25 17:36:48.666263 (Thread-81): 17:36:48  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe030f700>]}
+2022-12-25 17:36:48.667512 (Thread-81): sending response (<Response 33722 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:48.672191 (Thread-82): handling list request
+2022-12-25 17:36:48.672498 (Thread-82): 17:36:48  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe03c80a0>]}
+2022-12-25 17:36:48.704817 (Thread-82): 17:36:48  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe030fdf0>]}
+2022-12-25 17:36:48.705434 (Thread-82): 17:36:48  Found 13 models, 31 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 5 seed files, 0 sources, 0 exposures, 0 metrics
+2022-12-25 17:36:48.705870 (Thread-82): 17:36:48  Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d4a7040>]}
+2022-12-25 17:36:48.712298 (Thread-82): sending response (<Response 13535 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:48.725543 (Thread-83): handling ps request
+2022-12-25 17:36:48.725833 (Thread-83): 17:36:48  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d439ca0>]}
+2022-12-25 17:36:48.726363 (Thread-83): sending response (<Response 2332 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:48.899365 (Thread-84): handling status request
+2022-12-25 17:36:48.899750 (Thread-84): 17:36:48  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d439460>]}
+2022-12-25 17:36:48.901050 (Thread-84): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:48.915865 (Thread-85): handling poll request
+2022-12-25 17:36:48.916137 (Thread-85): 17:36:48  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d4393a0>]}
+2022-12-25 17:36:48.917084 (Thread-85): sending response (<Response 27304 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:49.084638 (Thread-86): handling status request
+2022-12-25 17:36:49.085041 (Thread-86): 17:36:49  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d439760>]}
+2022-12-25 17:36:49.086360 (Thread-86): sending response (<Response 33722 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:49.091137 (Thread-87): handling list request
+2022-12-25 17:36:49.091417 (Thread-87): 17:36:49  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d3fc850>]}
+2022-12-25 17:36:49.124128 (Thread-87): 17:36:49  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec350865b0>]}
+2022-12-25 17:36:49.124560 (Thread-87): 17:36:49  Found 13 models, 31 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 5 seed files, 0 sources, 0 exposures, 0 metrics
+2022-12-25 17:36:49.124838 (Thread-87): 17:36:49  Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d4327c0>]}
+2022-12-25 17:36:49.128921 (Thread-87): sending response (<Response 13535 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:54.147489 (Thread-88): handling status request
+2022-12-25 17:36:54.147892 (Thread-88): 17:36:54  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d3fcbb0>]}
+2022-12-25 17:36:54.149182 (Thread-88): sending response (<Response 33722 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:36:54.153865 (Thread-89): handling list request
+2022-12-25 17:36:54.154146 (Thread-89): 17:36:54  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe06b6670>]}
+2022-12-25 17:36:54.183038 (Thread-89): 17:36:54  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe06b6e80>]}
+2022-12-25 17:36:54.183526 (Thread-89): 17:36:54  Found 13 models, 31 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 5 seed files, 0 sources, 0 exposures, 0 metrics
+2022-12-25 17:36:54.183802 (Thread-89): 17:36:54  Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe06b6250>]}
+2022-12-25 17:36:54.210325 (Thread-89): sending response (<Response 26161 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:00.954027 (Thread-90): handling status request
+2022-12-25 17:37:00.954452 (Thread-90): 17:37:00  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2abb0820>]}
+2022-12-25 17:37:00.955818 (Thread-90): sending response (<Response 33722 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:00.960694 (Thread-91): handling list request
+2022-12-25 17:37:00.960967 (Thread-91): 17:37:00  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2abb0af0>]}
+2022-12-25 17:37:00.996193 (Thread-91): 17:37:00  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2d3fcb20>]}
+2022-12-25 17:37:00.996660 (Thread-91): 17:37:00  Found 13 models, 31 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 5 seed files, 0 sources, 0 exposures, 0 metrics
+2022-12-25 17:37:00.996936 (Thread-91): 17:37:00  Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe06b6580>]}
+2022-12-25 17:37:01.001580 (Thread-91): sending response (<Response 13535 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:11.390095 (Thread-92): handling status request
+2022-12-25 17:37:11.390522 (Thread-92): 17:37:11  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2ad5ad30>]}
+2022-12-25 17:37:11.391894 (Thread-92): sending response (<Response 33722 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:11.396550 (Thread-93): handling list request
+2022-12-25 17:37:11.396815 (Thread-93): 17:37:11  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2ad5a0d0>]}
+2022-12-25 17:37:11.428549 (Thread-93): 17:37:11  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe06b6970>]}
+2022-12-25 17:37:11.429007 (Thread-93): 17:37:11  Found 13 models, 31 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 5 seed files, 0 sources, 0 exposures, 0 metrics
+2022-12-25 17:37:11.429265 (Thread-93): 17:37:11  Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2ad5a0a0>]}
+2022-12-25 17:37:11.434706 (Thread-93): sending response (<Response 26161 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:12.750064 (Thread-94): handling status request
+2022-12-25 17:37:12.750477 (Thread-94): 17:37:12  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2855d490>]}
+2022-12-25 17:37:12.751801 (Thread-94): sending response (<Response 33722 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:12.756529 (Thread-95): handling list request
+2022-12-25 17:37:12.756798 (Thread-95): 17:37:12  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2855d9d0>]}
+2022-12-25 17:37:12.786064 (Thread-95): 17:37:12  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2ad5a0d0>]}
+2022-12-25 17:37:12.786509 (Thread-95): 17:37:12  Found 13 models, 31 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 5 seed files, 0 sources, 0 exposures, 0 metrics
+2022-12-25 17:37:12.786768 (Thread-95): 17:37:12  Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2855d580>]}
+2022-12-25 17:37:12.790744 (Thread-95): sending response (<Response 13535 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:14.531704 (Thread-96): handling ps request
+2022-12-25 17:37:14.532102 (Thread-96): 17:37:14  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec283df7c0>]}
+2022-12-25 17:37:14.532815 (Thread-96): sending response (<Response 3790 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:14.547113 (Thread-97): handling status request
+2022-12-25 17:37:14.547430 (Thread-97): 17:37:14  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec283dfd00>]}
+2022-12-25 17:37:14.548657 (Thread-97): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:14.650980 (Thread-98): handling ps request
+2022-12-25 17:37:14.651358 (Thread-98): 17:37:14  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec14042160>]}
+2022-12-25 17:37:14.652063 (Thread-98): sending response (<Response 3790 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:14.843943 (Thread-99): handling poll request
+2022-12-25 17:37:14.844349 (Thread-99): 17:37:14  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec140423d0>]}
+2022-12-25 17:37:14.845316 (Thread-99): sending response (<Response 27304 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:14.855994 (Thread-100): handling status request
+2022-12-25 17:37:14.856262 (Thread-100): 17:37:14  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec14042550>]}
+2022-12-25 17:37:14.857451 (Thread-100): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:15.017436 (Thread-101): handling status request
+2022-12-25 17:37:15.017878 (Thread-101): 17:37:15  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec14042220>]}
+2022-12-25 17:37:15.019146 (Thread-101): sending response (<Response 33722 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:15.024064 (Thread-102): handling list request
+2022-12-25 17:37:15.024339 (Thread-102): 17:37:15  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec14042670>]}
+2022-12-25 17:37:15.051632 (Thread-102): 17:37:15  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec14042b50>]}
+2022-12-25 17:37:15.052107 (Thread-102): 17:37:15  Found 13 models, 31 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 5 seed files, 0 sources, 0 exposures, 0 metrics
+2022-12-25 17:37:15.052381 (Thread-102): 17:37:15  Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec2855d4f0>]}
+2022-12-25 17:37:15.056453 (Thread-102): sending response (<Response 13538 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:21.162211 (Thread-103): handling status request
+2022-12-25 17:37:21.162641 (Thread-103): 17:37:21  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec14042820>]}
+2022-12-25 17:37:21.164004 (Thread-103): sending response (<Response 33722 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:21.169020 (Thread-104): handling list request
+2022-12-25 17:37:21.169299 (Thread-104): 17:37:21  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec141342b0>]}
+2022-12-25 17:37:21.201313 (Thread-104): 17:37:21  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec14042700>]}
+2022-12-25 17:37:21.201829 (Thread-104): 17:37:21  Found 13 models, 31 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 5 seed files, 0 sources, 0 exposures, 0 metrics
+2022-12-25 17:37:21.202112 (Thread-104): 17:37:21  Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec14042fd0>]}
+2022-12-25 17:37:21.208144 (Thread-104): sending response (<Response 26164 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:23.742504 (Thread-105): handling ps request
+2022-12-25 17:37:23.742918 (Thread-105): 17:37:23  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec283df7c0>]}
+2022-12-25 17:37:23.743698 (Thread-105): sending response (<Response 4374 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:23.790884 (Thread-106): handling ps request
+2022-12-25 17:37:23.791278 (Thread-106): 17:37:23  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febf4148fa0>]}
+2022-12-25 17:37:23.792045 (Thread-106): sending response (<Response 4374 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:23.799320 (Thread-107): handling run_sql request
+2022-12-25 17:37:23.799620 (Thread-107): 17:37:23  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febf4148c40>]}
+2022-12-25 17:37:26.400592 (Thread-107): sending response (<Response 133 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:26.430903 (MainThread): 17:37:26  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1058bd22-0aae-45ae-8d54-3ae45ea19017', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f846428a970>]}
+2022-12-25 17:37:26.431422 (MainThread): 17:37:26  Found 13 models, 31 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 5 seed files, 0 sources, 0 exposures, 0 metrics
+2022-12-25 17:37:26.432017 (Thread-1): 17:37:26  Acquiring new bigquery connection "rpc.spotify.request"
+2022-12-25 17:37:26.432161 (Thread-1): 17:37:26  Began compiling node rpc.spotify.request
+2022-12-25 17:37:26.432262 (Thread-1): 17:37:26  Compiling rpc.spotify.request
+2022-12-25 17:37:26.434851 (Thread-1): 17:37:26  finished collecting timing info
+2022-12-25 17:37:26.434990 (Thread-1): 17:37:26  Began executing node rpc.spotify.request
+2022-12-25 17:37:26.435101 (Thread-1): 17:37:26  Opening a new connection, currently in state init
+2022-12-25 17:37:26.439651 (Thread-1): 17:37:26  On rpc.spotify.request: -- stage_songplays
+with source as (
+    select 
+        *
+    from `dbt-demo-data-372717`.`dbt_ddemo`.`current_user_recently_played`
+),
+
+stage_songplays as (
+    select
+        songplays_id,
+        track_id,
+    	track_name,
+        track_duration,
+        track_is_explicit,
+        track_popularity,
+        track_played_at,
+        album_id,
+        album_name,
+        album_release_year,
+        album_type,
+        artist_name,
+        artist_name_others,
+        artist_id,
+        artist_id_others,
+        track_danceability,
+        track_energy,
+        track_key,
+        track_loudness,
+        track_mode,
+        track_speechiness,
+        track_acousticness,
+        track_instrumentalness,
+        track_liveness,
+        track_valence,
+        artist_popularity,
+        artist_followers,
+        artist_genre,
+        artist_genre_others
+    from source
+)
+select
+    *
+from stage_songplays
+limit 500
+/* limit added automatically by dbt cloud */
+2022-12-25 17:37:26.592300 (Thread-108): handling ps request
+2022-12-25 17:37:26.592770 (Thread-108): 17:37:26  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe06fd730>]}
+2022-12-25 17:37:26.593972 (Thread-108): sending response (<Response 4837 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:26.708865 (Thread-109): handling ps request
+2022-12-25 17:37:26.709258 (Thread-109): 17:37:26  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe06fd9a0>]}
+2022-12-25 17:37:26.731064 (Thread-109): sending response (<Response 4837 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:26.829094 (Thread-110): handling status request
+2022-12-25 17:37:26.829503 (Thread-110): 17:37:26  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe06fdac0>]}
+2022-12-25 17:37:26.831053 (Thread-110): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:26.846249 (Thread-111): handling poll request
+2022-12-25 17:37:26.846526 (Thread-111): 17:37:26  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe06fd640>]}
+2022-12-25 17:37:26.847059 (Thread-111): sending response (<Response 4393 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:26.915102 (Thread-112): handling poll request
+2022-12-25 17:37:26.915492 (Thread-112): 17:37:26  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe06fd850>]}
+2022-12-25 17:37:26.916051 (Thread-112): sending response (<Response 4393 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:27.092236 (Thread-113): handling status request
+2022-12-25 17:37:27.092643 (Thread-113): 17:37:27  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe06fd9d0>]}
+2022-12-25 17:37:27.093964 (Thread-113): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:27.318644 (Thread-1): 17:37:27  BigQuery adapter: https://console.cloud.google.com/bigquery?project=dbt-demo-data-372717&j=bq:e00a0963-6b06-4849-82f4-cc623e7fdfe7:US&page=queryresults
+2022-12-25 17:37:27.319001 (Thread-1): 17:37:27  finished collecting timing info
+2022-12-25 17:37:28.030856 (Thread-114): handling poll request
+2022-12-25 17:37:28.031261 (Thread-114): 17:37:28  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe06c8100>]}
+2022-12-25 17:37:28.033199 (Thread-114): sending response (<Response 25110 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:28.775047 (Thread-115): handling ps request
+2022-12-25 17:37:28.775458 (Thread-115): 17:37:28  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe06c8760>]}
+2022-12-25 17:37:28.776224 (Thread-115): sending response (<Response 4862 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:28.956439 (Thread-116): handling status request
+2022-12-25 17:37:28.956841 (Thread-116): 17:37:28  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe06c8b80>]}
+2022-12-25 17:37:28.958121 (Thread-116): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:29.126388 (Thread-117): handling poll request
+2022-12-25 17:37:29.126799 (Thread-117): 17:37:29  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe06c8970>]}
+2022-12-25 17:37:29.128641 (Thread-117): sending response (<Response 29133 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:29.375761 (Thread-118): handling status request
+2022-12-25 17:37:29.376139 (Thread-118): 17:37:29  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe0587310>]}
+2022-12-25 17:37:29.377335 (Thread-118): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:29.392453 (Thread-119): handling ps request
+2022-12-25 17:37:29.392712 (Thread-119): 17:37:29  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe0587220>]}
+2022-12-25 17:37:29.393353 (Thread-119): sending response (<Response 4862 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:33.836421 (Thread-120): handling run_sql request
+2022-12-25 17:37:33.836822 (Thread-120): 17:37:33  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe0587640>]}
+2022-12-25 17:37:33.852831 (Thread-121): handling ps request
+2022-12-25 17:37:33.858535 (Thread-121): 17:37:33  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe0587fd0>]}
+2022-12-25 17:37:33.860718 (Thread-121): sending response (<Response 5318 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:34.039053 (Thread-122): handling poll request
+2022-12-25 17:37:34.039454 (Thread-122): 17:37:34  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe05aa790>]}
+2022-12-25 17:37:34.039972 (Thread-122): sending response (<Response 365 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:34.220739 (Thread-123): handling status request
+2022-12-25 17:37:34.221136 (Thread-123): 17:37:34  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe05aa850>]}
+2022-12-25 17:37:34.223191 (Thread-123): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:34.234078 (Thread-124): handling ps request
+2022-12-25 17:37:34.234364 (Thread-124): 17:37:34  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe06fdc40>]}
+2022-12-25 17:37:34.235079 (Thread-124): sending response (<Response 5318 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:36.258759 (Thread-125): handling poll request
+2022-12-25 17:37:36.259160 (Thread-125): 17:37:36  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe06fd7f0>]}
+2022-12-25 17:37:36.259663 (Thread-125): sending response (<Response 365 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:36.434879 (Thread-120): sending response (<Response 133 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:36.447216 (Thread-126): handling status request
+2022-12-25 17:37:36.447555 (Thread-126): 17:37:36  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe06fd820>]}
+2022-12-25 17:37:36.448770 (Thread-126): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:36.467093 (MainThread): 17:37:36  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'daf36858-625b-41de-a02d-098ad2a15a8a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f45d0312970>]}
+2022-12-25 17:37:36.467617 (MainThread): 17:37:36  Found 13 models, 31 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 5 seed files, 0 sources, 0 exposures, 0 metrics
+2022-12-25 17:37:36.468197 (Thread-1): 17:37:36  Acquiring new bigquery connection "rpc.spotify.request"
+2022-12-25 17:37:36.468342 (Thread-1): 17:37:36  Began compiling node rpc.spotify.request
+2022-12-25 17:37:36.468454 (Thread-1): 17:37:36  Compiling rpc.spotify.request
+2022-12-25 17:37:36.471926 (Thread-1): 17:37:36  finished collecting timing info
+2022-12-25 17:37:36.472061 (Thread-1): 17:37:36  Began executing node rpc.spotify.request
+2022-12-25 17:37:36.472167 (Thread-1): 17:37:36  Opening a new connection, currently in state init
+2022-12-25 17:37:36.476682 (Thread-1): 17:37:36  On rpc.spotify.request: -- albums table
+
+
+
+    select distinct
+        album_id,
+        album_name,
+        album_release_year,
+        album_type                                   
+    from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_songplays`
+    union
+
+    select distinct
+        album_id,
+        album_name,
+        album_release_year,
+        album_type                                   
+    from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_top_tracks`
+    
+
+limit 500
+/* limit added automatically by dbt cloud */
+2022-12-25 17:37:36.682681 (Thread-127): handling ps request
+2022-12-25 17:37:36.683080 (Thread-127): 17:37:36  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe06c8070>]}
+2022-12-25 17:37:36.683901 (Thread-127): sending response (<Response 5313 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:36.691272 (Thread-128): handling ps request
+2022-12-25 17:37:36.691615 (Thread-128): 17:37:36  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe06c8850>]}
+2022-12-25 17:37:36.692478 (Thread-128): sending response (<Response 5313 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:36.702522 (Thread-1): 17:37:36  BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Syntax error: Expected keyword ALL or keyword DISTINCT but got keyword SELECT at [13:5]')
+2022-12-25 17:37:36.915054 (Thread-129): handling status request
+2022-12-25 17:37:36.915479 (Thread-129): 17:37:36  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe06c85b0>]}
+2022-12-25 17:37:36.916749 (Thread-129): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:36.946707 (Thread-130): handling poll request
+2022-12-25 17:37:36.947095 (Thread-130): 17:37:36  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe06c8460>]}
+2022-12-25 17:37:36.947696 (Thread-130): sending response (<Response 4288 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:37.115362 (Thread-1): 17:37:37  BigQuery adapter: https://console.cloud.google.com/bigquery?project=dbt-demo-data-372717&j=bq:US:46a5f605-b6a3-4304-857a-f97f03437af9&page=queryresults
+2022-12-25 17:37:37.115579 (Thread-1): 17:37:37  finished collecting timing info
+2022-12-25 17:37:37.115720 (Thread-1): Got an exception: Database Error
+  Syntax error: Expected keyword ALL or keyword DISTINCT but got keyword SELECT at [13:5]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/dbt/adapters/bigquery/connections.py", line 207, in exception_handler
+    yield
+  File "/usr/local/lib/python3.8/dist-packages/dbt/adapters/bigquery/connections.py", line 646, in _retry_and_handle
+    return retry.retry_target(
+  File "/usr/local/lib/python3.8/dist-packages/google/api_core/retry.py", line 191, in retry_target
+    return target()
+  File "/usr/local/lib/python3.8/dist-packages/dbt/adapters/bigquery/connections.py", line 429, in fn
+    return self._query_and_results(
+  File "/usr/local/lib/python3.8/dist-packages/dbt/adapters/bigquery/connections.py", line 631, in _query_and_results
+    iterator = query_job.result(timeout=job_execution_timeout)
+  File "/usr/local/lib/python3.8/dist-packages/google/cloud/bigquery/job/query.py", line 1303, in result
+    super(QueryJob, self).result(retry=retry, timeout=timeout)
+  File "/usr/local/lib/python3.8/dist-packages/google/cloud/bigquery/job/base.py", line 679, in result
+    return super(_AsyncJob, self).result(timeout=timeout, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/google/api_core/future/polling.py", line 261, in result
+    raise self._exception
+google.api_core.exceptions.BadRequest: 400 Syntax error: Expected keyword ALL or keyword DISTINCT but got keyword SELECT at [13:5]
+
+(job ID: 46a5f605-b6a3-4304-857a-f97f03437af9)
+
+                 -----Query Job SQL Follows-----                 
+
+    |    .    |    .    |    .    |    .    |    .    |    .    |
+   1:-- albums table
+   2:
+   3:
+   4:
+   5:    select distinct
+   6:        album_id,
+   7:        album_name,
+   8:        album_release_year,
+   9:        album_type                                   
+  10:    from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_songplays`
+  11:    union
+  12:
+  13:    select distinct
+  14:        album_id,
+  15:        album_name,
+  16:        album_release_year,
+  17:        album_type                                   
+  18:    from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_top_tracks`
+  19:    
+  20:
+  21:limit 500
+  22:/* limit added automatically by dbt cloud */
+    |    .    |    .    |    .    |    .    |    .    |    .    |
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/dbt/task/base.py", line 385, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.8/dist-packages/dbt/task/base.py", line 338, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.8/dist-packages/dbt/task/base.py", line 429, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.8/dist-packages/dbt_rpc/rpc/node_runners.py", line 108, in execute
+    _, execute_result = self.adapter.execute(compiled_sql, fetch=True)
+  File "/usr/local/lib/python3.8/dist-packages/dbt/adapters/base/impl.py", line 278, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch)
+  File "/usr/local/lib/python3.8/dist-packages/dbt/adapters/bigquery/connections.py", line 446, in execute
+    query_job, iterator = self.raw_execute(sql, fetch=fetch)
+  File "/usr/local/lib/python3.8/dist-packages/dbt/adapters/bigquery/connections.py", line 437, in raw_execute
+    query_job, iterator = self._retry_and_handle(msg=sql, conn=conn, fn=fn)
+  File "/usr/local/lib/python3.8/dist-packages/dbt/adapters/bigquery/connections.py", line 646, in _retry_and_handle
+    return retry.retry_target(
+  File "/usr/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.8/dist-packages/dbt/adapters/bigquery/connections.py", line 211, in exception_handler
+    self.handle_error(e, message)
+  File "/usr/local/lib/python3.8/dist-packages/dbt/adapters/bigquery/connections.py", line 199, in handle_error
+    raise DatabaseException(error_msg)
+dbt.exceptions.DatabaseException: Database Error
+  Syntax error: Expected keyword ALL or keyword DISTINCT but got keyword SELECT at [13:5]
+2022-12-25 17:37:37.117758 (Thread-1): Got exception RPCException(10003, Database Error, {'type': 'DatabaseException', 'message': 'Database Error in rpc request (from remote system.sql)\n  Syntax error: Expected keyword ALL or keyword DISTINCT but got keyword SELECT at [13:5]', 'raw_code': "-- albums table\r\n{% set tables = ['stg_songplays', 'stg_top_tracks'] %}\r\n\r\n{% for table in tables %}\r\n    select distinct\r\n        album_id,\r\n        album_name,\r\n        album_release_year,\r\n        album_type                                   \r\n    from {{ ref(table) }}\r\n    {% if not loop.last -%} union {%- endif %}\r\n{% endfor %}\nlimit 500\n/* limit added automatically by dbt cloud */", 'compiled_code': '-- albums table\n\n\n\n    select distinct\n        album_id,\n        album_name,\n        album_release_year,\n        album_type                                   \n    from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_songplays`\n    union\n\n    select distinct\n        album_id,\n        album_name,\n        album_release_year,\n        album_type                                   \n    from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_top_tracks`\n    \n\nlimit 500\n/* limit added automatically by dbt cloud */', 'tags': None}, None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/dbt_rpc/task/sql_commands.py", line 148, in _in_thread
+    self.node_results.append(runner.safe_run(self.manifest))
+  File "/usr/local/lib/python3.8/dist-packages/dbt/task/base.py", line 403, in safe_run
+    result = self.error_result(ctx.node, error, started, [])
+  File "/usr/local/lib/python3.8/dist-packages/dbt_rpc/rpc/node_runners.py", line 68, in error_result
+    raise error
+dbt_rpc.rpc.error.RPCException: RPCException(10003, Database Error, {'type': 'DatabaseException', 'message': 'Database Error in rpc request (from remote system.sql)\n  Syntax error: Expected keyword ALL or keyword DISTINCT but got keyword SELECT at [13:5]', 'raw_code': "-- albums table\r\n{% set tables = ['stg_songplays', 'stg_top_tracks'] %}\r\n\r\n{% for table in tables %}\r\n    select distinct\r\n        album_id,\r\n        album_name,\r\n        album_release_year,\r\n        album_type                                   \r\n    from {{ ref(table) }}\r\n    {% if not loop.last -%} union {%- endif %}\r\n{% endfor %}\nlimit 500\n/* limit added automatically by dbt cloud */", 'compiled_code': '-- albums table\n\n\n\n    select distinct\n        album_id,\n        album_name,\n        album_release_year,\n        album_type                                   \n    from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_songplays`\n    union\n\n    select distinct\n        album_id,\n        album_name,\n        album_release_year,\n        album_type                                   \n    from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_top_tracks`\n    \n\nlimit 500\n/* limit added automatically by dbt cloud */', 'tags': None}, None)
+2022-12-25 17:37:38.137945 (Thread-131): handling poll request
+2022-12-25 17:37:38.138341 (Thread-131): 17:37:38  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe05aa070>]}
+2022-12-25 17:37:38.138932 (Thread-131): sending response (<Response 13858 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:38.467173 (Thread-132): handling poll request
+2022-12-25 17:37:38.467583 (Thread-132): 17:37:38  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe05aa8b0>]}
+2022-12-25 17:37:38.468198 (Thread-132): sending response (<Response 13858 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:38.645514 (Thread-133): handling status request
+2022-12-25 17:37:38.645881 (Thread-133): 17:37:38  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe05aab20>]}
+2022-12-25 17:37:38.647158 (Thread-133): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:38.876649 (Thread-134): handling ps request
+2022-12-25 17:37:38.877013 (Thread-134): 17:37:38  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe05aaca0>]}
+2022-12-25 17:37:38.877816 (Thread-134): sending response (<Response 5336 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:37:39.057443 (Thread-135): handling status request
+2022-12-25 17:37:39.057813 (Thread-135): 17:37:39  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe05aaee0>]}
+2022-12-25 17:37:39.059041 (Thread-135): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:38:39.693215 (Thread-136): handling ps request
+2022-12-25 17:38:39.693651 (Thread-136): 17:38:39  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe05aad60>]}
+2022-12-25 17:38:39.694448 (Thread-136): sending response (<Response 5336 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:38:39.696142 (Thread-137): handling run_sql request
+2022-12-25 17:38:39.696418 (Thread-137): 17:38:39  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe05201f0>]}
+2022-12-25 17:38:42.307385 (Thread-137): sending response (<Response 133 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:38:42.340285 (MainThread): 17:38:42  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'dc9544f0-030b-4b97-92bb-f6ce8688ef96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99e01098b0>]}
+2022-12-25 17:38:42.340829 (MainThread): 17:38:42  Found 13 models, 31 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 5 seed files, 0 sources, 0 exposures, 0 metrics
+2022-12-25 17:38:42.341435 (Thread-1): 17:38:42  Acquiring new bigquery connection "rpc.spotify.request"
+2022-12-25 17:38:42.341577 (Thread-1): 17:38:42  Began compiling node rpc.spotify.request
+2022-12-25 17:38:42.341706 (Thread-1): 17:38:42  Compiling rpc.spotify.request
+2022-12-25 17:38:42.345271 (Thread-1): 17:38:42  finished collecting timing info
+2022-12-25 17:38:42.345412 (Thread-1): 17:38:42  Began executing node rpc.spotify.request
+2022-12-25 17:38:42.345522 (Thread-1): 17:38:42  Opening a new connection, currently in state init
+2022-12-25 17:38:42.350180 (Thread-1): 17:38:42  On rpc.spotify.request: -- tracks table
+
+
+
+    select distinct
+        track_id,
+        track_name,
+        track_duration,
+        track_is_explicit,
+        track_popularity,
+        track_danceability,
+        track_energy,
+        track_key,
+        track_loudness,
+        track_mode,
+        track_speechiness,
+        track_acousticness,
+        track_instrumentalness,
+        track_liveness,
+        track_valence
+    from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_songplays`
+    union
+
+    select distinct
+        track_id,
+        track_name,
+        track_duration,
+        track_is_explicit,
+        track_popularity,
+        track_danceability,
+        track_energy,
+        track_key,
+        track_loudness,
+        track_mode,
+        track_speechiness,
+        track_acousticness,
+        track_instrumentalness,
+        track_liveness,
+        track_valence
+    from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_top_tracks`
+    
+
+limit 500
+/* limit added automatically by dbt cloud */
+2022-12-25 17:38:42.549979 (Thread-138): handling ps request
+2022-12-25 17:38:42.550454 (Thread-138): 17:38:42  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe0520fd0>]}
+2022-12-25 17:38:42.551693 (Thread-138): sending response (<Response 5787 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:38:42.556996 (Thread-139): handling ps request
+2022-12-25 17:38:42.557266 (Thread-139): 17:38:42  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe050b280>]}
+2022-12-25 17:38:42.568063 (Thread-1): 17:38:42  BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Syntax error: Expected keyword ALL or keyword DISTINCT but got keyword SELECT at [24:5]')
+2022-12-25 17:38:42.586101 (Thread-139): sending response (<Response 5787 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:38:42.756749 (Thread-1): 17:38:42  BigQuery adapter: https://console.cloud.google.com/bigquery?project=dbt-demo-data-372717&j=bq:US:735003ad-4c1b-4f9b-8881-03cebc365c80&page=queryresults
+2022-12-25 17:38:42.756959 (Thread-1): 17:38:42  finished collecting timing info
+2022-12-25 17:38:42.757091 (Thread-1): Got an exception: Database Error
+  Syntax error: Expected keyword ALL or keyword DISTINCT but got keyword SELECT at [24:5]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/dbt/adapters/bigquery/connections.py", line 207, in exception_handler
+    yield
+  File "/usr/local/lib/python3.8/dist-packages/dbt/adapters/bigquery/connections.py", line 646, in _retry_and_handle
+    return retry.retry_target(
+  File "/usr/local/lib/python3.8/dist-packages/google/api_core/retry.py", line 191, in retry_target
+    return target()
+  File "/usr/local/lib/python3.8/dist-packages/dbt/adapters/bigquery/connections.py", line 429, in fn
+    return self._query_and_results(
+  File "/usr/local/lib/python3.8/dist-packages/dbt/adapters/bigquery/connections.py", line 631, in _query_and_results
+    iterator = query_job.result(timeout=job_execution_timeout)
+  File "/usr/local/lib/python3.8/dist-packages/google/cloud/bigquery/job/query.py", line 1303, in result
+    super(QueryJob, self).result(retry=retry, timeout=timeout)
+  File "/usr/local/lib/python3.8/dist-packages/google/cloud/bigquery/job/base.py", line 679, in result
+    return super(_AsyncJob, self).result(timeout=timeout, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/google/api_core/future/polling.py", line 261, in result
+    raise self._exception
+google.api_core.exceptions.BadRequest: 400 Syntax error: Expected keyword ALL or keyword DISTINCT but got keyword SELECT at [24:5]
+
+(job ID: 735003ad-4c1b-4f9b-8881-03cebc365c80)
+
+                 -----Query Job SQL Follows-----                 
+
+    |    .    |    .    |    .    |    .    |    .    |    .    |
+   1:-- tracks table
+   2:
+   3:
+   4:
+   5:    select distinct
+   6:        track_id,
+   7:        track_name,
+   8:        track_duration,
+   9:        track_is_explicit,
+  10:        track_popularity,
+  11:        track_danceability,
+  12:        track_energy,
+  13:        track_key,
+  14:        track_loudness,
+  15:        track_mode,
+  16:        track_speechiness,
+  17:        track_acousticness,
+  18:        track_instrumentalness,
+  19:        track_liveness,
+  20:        track_valence
+  21:    from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_songplays`
+  22:    union
+  23:
+  24:    select distinct
+  25:        track_id,
+  26:        track_name,
+  27:        track_duration,
+  28:        track_is_explicit,
+  29:        track_popularity,
+  30:        track_danceability,
+  31:        track_energy,
+  32:        track_key,
+  33:        track_loudness,
+  34:        track_mode,
+  35:        track_speechiness,
+  36:        track_acousticness,
+  37:        track_instrumentalness,
+  38:        track_liveness,
+  39:        track_valence
+  40:    from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_top_tracks`
+  41:    
+  42:
+  43:limit 500
+  44:/* limit added automatically by dbt cloud */
+    |    .    |    .    |    .    |    .    |    .    |    .    |
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/dbt/task/base.py", line 385, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.8/dist-packages/dbt/task/base.py", line 338, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.8/dist-packages/dbt/task/base.py", line 429, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.8/dist-packages/dbt_rpc/rpc/node_runners.py", line 108, in execute
+    _, execute_result = self.adapter.execute(compiled_sql, fetch=True)
+  File "/usr/local/lib/python3.8/dist-packages/dbt/adapters/base/impl.py", line 278, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch)
+  File "/usr/local/lib/python3.8/dist-packages/dbt/adapters/bigquery/connections.py", line 446, in execute
+    query_job, iterator = self.raw_execute(sql, fetch=fetch)
+  File "/usr/local/lib/python3.8/dist-packages/dbt/adapters/bigquery/connections.py", line 437, in raw_execute
+    query_job, iterator = self._retry_and_handle(msg=sql, conn=conn, fn=fn)
+  File "/usr/local/lib/python3.8/dist-packages/dbt/adapters/bigquery/connections.py", line 646, in _retry_and_handle
+    return retry.retry_target(
+  File "/usr/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.8/dist-packages/dbt/adapters/bigquery/connections.py", line 211, in exception_handler
+    self.handle_error(e, message)
+  File "/usr/local/lib/python3.8/dist-packages/dbt/adapters/bigquery/connections.py", line 199, in handle_error
+    raise DatabaseException(error_msg)
+dbt.exceptions.DatabaseException: Database Error
+  Syntax error: Expected keyword ALL or keyword DISTINCT but got keyword SELECT at [24:5]
+2022-12-25 17:38:42.759123 (Thread-1): Got exception RPCException(10003, Database Error, {'type': 'DatabaseException', 'message': 'Database Error in rpc request (from remote system.sql)\n  Syntax error: Expected keyword ALL or keyword DISTINCT but got keyword SELECT at [24:5]', 'raw_code': "-- tracks table\r\n{% set tables = ['stg_songplays', 'stg_top_tracks'] %}\r\n\r\n{% for table in tables %}\r\n    select distinct\r\n        track_id,\r\n        track_name,\r\n        track_duration,\r\n        track_is_explicit,\r\n        track_popularity,\r\n        track_danceability,\r\n        track_energy,\r\n        track_key,\r\n        track_loudness,\r\n        track_mode,\r\n        track_speechiness,\r\n        track_acousticness,\r\n        track_instrumentalness,\r\n        track_liveness,\r\n        track_valence\r\n    from {{ ref(table) }}\r\n    {% if not loop.last -%} union {%- endif %}\r\n{% endfor %}\nlimit 500\n/* limit added automatically by dbt cloud */", 'compiled_code': '-- tracks table\n\n\n\n    select distinct\n        track_id,\n        track_name,\n        track_duration,\n        track_is_explicit,\n        track_popularity,\n        track_danceability,\n        track_energy,\n        track_key,\n        track_loudness,\n        track_mode,\n        track_speechiness,\n        track_acousticness,\n        track_instrumentalness,\n        track_liveness,\n        track_valence\n    from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_songplays`\n    union\n\n    select distinct\n        track_id,\n        track_name,\n        track_duration,\n        track_is_explicit,\n        track_popularity,\n        track_danceability,\n        track_energy,\n        track_key,\n        track_loudness,\n        track_mode,\n        track_speechiness,\n        track_acousticness,\n        track_instrumentalness,\n        track_liveness,\n        track_valence\n    from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_top_tracks`\n    \n\nlimit 500\n/* limit added automatically by dbt cloud */', 'tags': None}, None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/dbt_rpc/task/sql_commands.py", line 148, in _in_thread
+    self.node_results.append(runner.safe_run(self.manifest))
+  File "/usr/local/lib/python3.8/dist-packages/dbt/task/base.py", line 403, in safe_run
+    result = self.error_result(ctx.node, error, started, [])
+  File "/usr/local/lib/python3.8/dist-packages/dbt_rpc/rpc/node_runners.py", line 68, in error_result
+    raise error
+dbt_rpc.rpc.error.RPCException: RPCException(10003, Database Error, {'type': 'DatabaseException', 'message': 'Database Error in rpc request (from remote system.sql)\n  Syntax error: Expected keyword ALL or keyword DISTINCT but got keyword SELECT at [24:5]', 'raw_code': "-- tracks table\r\n{% set tables = ['stg_songplays', 'stg_top_tracks'] %}\r\n\r\n{% for table in tables %}\r\n    select distinct\r\n        track_id,\r\n        track_name,\r\n        track_duration,\r\n        track_is_explicit,\r\n        track_popularity,\r\n        track_danceability,\r\n        track_energy,\r\n        track_key,\r\n        track_loudness,\r\n        track_mode,\r\n        track_speechiness,\r\n        track_acousticness,\r\n        track_instrumentalness,\r\n        track_liveness,\r\n        track_valence\r\n    from {{ ref(table) }}\r\n    {% if not loop.last -%} union {%- endif %}\r\n{% endfor %}\nlimit 500\n/* limit added automatically by dbt cloud */", 'compiled_code': '-- tracks table\n\n\n\n    select distinct\n        track_id,\n        track_name,\n        track_duration,\n        track_is_explicit,\n        track_popularity,\n        track_danceability,\n        track_energy,\n        track_key,\n        track_loudness,\n        track_mode,\n        track_speechiness,\n        track_acousticness,\n        track_instrumentalness,\n        track_liveness,\n        track_valence\n    from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_songplays`\n    union\n\n    select distinct\n        track_id,\n        track_name,\n        track_duration,\n        track_is_explicit,\n        track_popularity,\n        track_danceability,\n        track_energy,\n        track_key,\n        track_loudness,\n        track_mode,\n        track_speechiness,\n        track_acousticness,\n        track_instrumentalness,\n        track_liveness,\n        track_valence\n    from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_top_tracks`\n    \n\nlimit 500\n/* limit added automatically by dbt cloud */', 'tags': None}, None)
+2022-12-25 17:38:42.773607 (Thread-140): handling status request
+2022-12-25 17:38:42.773984 (Thread-140): 17:38:42  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe050b400>]}
+2022-12-25 17:38:42.775563 (Thread-140): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:38:42.780736 (Thread-141): handling poll request
+2022-12-25 17:38:42.781027 (Thread-141): 17:38:42  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe050bd00>]}
+2022-12-25 17:38:42.781713 (Thread-141): sending response (<Response 15726 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:38:42.846433 (Thread-142): handling poll request
+2022-12-25 17:38:42.846827 (Thread-142): 17:38:42  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe050b730>]}
+2022-12-25 17:38:42.847508 (Thread-142): sending response (<Response 15726 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:38:43.029846 (Thread-143): handling status request
+2022-12-25 17:38:43.030235 (Thread-143): 17:38:43  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe0520ac0>]}
+2022-12-25 17:38:43.031504 (Thread-143): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:38:43.978456 (Thread-144): handling poll request
+2022-12-25 17:38:43.978861 (Thread-144): 17:38:43  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe0520b80>]}
+2022-12-25 17:38:43.979465 (Thread-144): sending response (<Response 17398 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:38:44.740234 (Thread-145): handling ps request
+2022-12-25 17:38:44.740643 (Thread-145): 17:38:44  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe0520580>]}
+2022-12-25 17:38:44.741471 (Thread-145): sending response (<Response 5810 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:38:44.931615 (Thread-146): handling status request
+2022-12-25 17:38:44.932010 (Thread-146): 17:38:44  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe05aaa90>]}
+2022-12-25 17:38:44.933240 (Thread-146): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:38:45.044247 (Thread-147): handling poll request
+2022-12-25 17:38:45.044624 (Thread-147): 17:38:45  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe05aa520>]}
+2022-12-25 17:38:45.045204 (Thread-147): sending response (<Response 17398 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:38:45.232485 (Thread-148): handling status request
+2022-12-25 17:38:45.232870 (Thread-148): 17:38:45  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe06c8dc0>]}
+2022-12-25 17:38:45.234122 (Thread-148): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:40:46.165385 (Thread-149): handling status request
+2022-12-25 17:40:46.167065 (Thread-149): 17:40:46  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe06c88b0>]}
+2022-12-25 17:40:46.168333 (Thread-149): sending response (<Response 33739 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:40:58.168902 (Thread-150): handling ps request
+2022-12-25 17:40:58.169307 (Thread-150): 17:40:58  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe06fd130>]}
+2022-12-25 17:40:58.170151 (Thread-150): sending response (<Response 5817 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:40:58.175431 (Thread-151): handling status request
+2022-12-25 17:40:58.175754 (Thread-151): 17:40:58  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe050b970>]}
+2022-12-25 17:40:58.176883 (Thread-151): sending response (<Response 33746 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:40:58.288538 (Thread-152): handling status request
+2022-12-25 17:40:58.288935 (Thread-152): 17:40:58  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe06fdb80>]}
+2022-12-25 17:40:58.290179 (Thread-152): sending response (<Response 33746 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:40:58.307640 (Thread-153): handling status request
+2022-12-25 17:40:58.307931 (Thread-153): 17:40:58  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe06fd6a0>]}
+2022-12-25 17:40:58.309025 (Thread-153): sending response (<Response 33746 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:40:58.730348 (Thread-154): handling poll request
+2022-12-25 17:40:58.730757 (Thread-154): 17:40:58  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe04d3340>]}
+2022-12-25 17:40:58.735507 (Thread-154): sending response (<Response 139085 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:40:59.511477 (Thread-155): handling status request
+2022-12-25 17:40:59.511885 (Thread-155): 17:40:59  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe0520e20>]}
+2022-12-25 17:40:59.513132 (Thread-155): sending response (<Response 33746 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:40:59.629764 (Thread-156): handling status request
+2022-12-25 17:40:59.630301 (Thread-156): 17:40:59  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe050b970>]}
+2022-12-25 17:40:59.631586 (Thread-156): sending response (<Response 33746 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:40:59.668868 (Thread-157): handling status request
+2022-12-25 17:40:59.669173 (Thread-157): 17:40:59  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe050bcd0>]}
+2022-12-25 17:40:59.670348 (Thread-157): sending response (<Response 33746 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:41:14.488047 (Thread-158): handling status request
+2022-12-25 17:41:14.488483 (Thread-158): 17:41:14  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe050b490>]}
+2022-12-25 17:41:14.489811 (Thread-158): sending response (<Response 33722 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:41:14.494676 (Thread-159): handling list request
+2022-12-25 17:41:14.494954 (Thread-159): 17:41:14  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe050bdf0>]}
+2022-12-25 17:41:14.527554 (Thread-159): 17:41:14  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe050be50>]}
+2022-12-25 17:41:14.528067 (Thread-159): 17:41:14  Found 13 models, 31 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 5 seed files, 0 sources, 0 exposures, 0 metrics
+2022-12-25 17:41:14.528379 (Thread-159): 17:41:14  Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec14134ca0>]}
+2022-12-25 17:41:14.532901 (Thread-159): sending response (<Response 13538 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:42:56.122302 (Thread-160): handling status request
+2022-12-25 17:42:56.123866 (Thread-160): 17:42:56  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe04d3700>]}
+2022-12-25 17:42:56.125116 (Thread-160): sending response (<Response 33746 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:42:56.303031 (Thread-161): handling run_sql request
+2022-12-25 17:42:56.303387 (Thread-161): 17:42:56  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe04d3850>]}
+2022-12-25 17:42:58.894367 (Thread-161): sending response (<Response 140 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:42:58.927660 (MainThread): 17:42:58  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5817ea5c-1551-4563-8fc3-6fdbd62652c1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4e24673f10>]}
+2022-12-25 17:42:58.928174 (MainThread): 17:42:58  Found 13 models, 31 tests, 0 snapshots, 0 analyses, 319 macros, 0 operations, 5 seed files, 0 sources, 0 exposures, 0 metrics
+2022-12-25 17:42:58.928749 (Thread-1): 17:42:58  Acquiring new bigquery connection "rpc.spotify.request"
+2022-12-25 17:42:58.928897 (Thread-1): 17:42:58  Began compiling node rpc.spotify.request
+2022-12-25 17:42:58.928993 (Thread-1): 17:42:58  Compiling rpc.spotify.request
+2022-12-25 17:42:58.934024 (Thread-1): 17:42:58  finished collecting timing info
+2022-12-25 17:42:58.934174 (Thread-1): Got an exception: Compilation Error in rpc request (from remote system.sql)
+  'dbt_utils' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/dbt/clients/jinja.py", line 510, in catch_jinja
+    yield
+  File "/usr/local/lib/python3.8/dist-packages/dbt/clients/jinja.py", line 542, in render_template
+    return template.render(ctx)
+  File "/usr/local/lib/python3.8/dist-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.8/dist-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "<template>", line 15, in top-level template code
+  File "/usr/local/lib/python3.8/dist-packages/jinja2/sandbox.py", line 326, in getattr
+    value = getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'dbt_utils' is undefined
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/dbt/task/base.py", line 385, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.8/dist-packages/dbt/task/base.py", line 325, in compile_and_execute
+    ctx.node = self.compile(manifest)
+  File "/usr/local/lib/python3.8/dist-packages/dbt_rpc/rpc/node_runners.py", line 57, in compile
+    return compiler.compile_node(self.node, manifest, {}, write=False)
+  File "/usr/local/lib/python3.8/dist-packages/dbt/compilation.py", line 535, in compile_node
+    node = self._compile_node(node, manifest, extra_context)
+  File "/usr/local/lib/python3.8/dist-packages/dbt/compilation.py", line 394, in _compile_node
+    compiled_node.compiled_code = jinja.get_rendered(
+  File "/usr/local/lib/python3.8/dist-packages/dbt/clients/jinja.py", line 587, in get_rendered
+    return render_template(template, ctx, node)
+  File "/usr/local/lib/python3.8/dist-packages/dbt/clients/jinja.py", line 542, in render_template
+    return template.render(ctx)
+  File "/usr/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.8/dist-packages/dbt/clients/jinja.py", line 515, in catch_jinja
+    raise UndefinedMacroException(str(e), node) from e
+dbt.exceptions.UndefinedMacroException: Compilation Error in rpc request (from remote system.sql)
+  'dbt_utils' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+2022-12-25 17:42:58.935594 (Thread-1): Got exception RPCException(10004, Compilation Error, {'type': 'UndefinedMacroException', 'message': 'Compilation Error in rpc request (from remote system.sql)\n  \'dbt_utils\' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".', 'raw_code': '-- albums table\n-- {% set tables = [\'stg_songplays\', \'stg_top_tracks\'] %}\n\n-- {% for table in tables %}\n--     select distinct\n--         album_id,\n--         album_name,\n--         album_release_year,\n--         album_type                                   \n--     from {{ ref(table) }}\n--     {% if not loop.last -%} union {%- endif %}\n-- {% endfor %}\n\nselect * from \n{{ dbt_utils.union_relations(\n    relations=[ref(\'stg_songplays\'), ref(\'stg_top_tracks\')],\n    exclude=["album_id","album_name","album_release_year","album_type"]\n) }}\nlimit 500\n/* limit added automatically by dbt cloud */', 'compiled_code': None, 'tags': None}, None)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/dbt_rpc/task/sql_commands.py", line 148, in _in_thread
+    self.node_results.append(runner.safe_run(self.manifest))
+  File "/usr/local/lib/python3.8/dist-packages/dbt/task/base.py", line 403, in safe_run
+    result = self.error_result(ctx.node, error, started, [])
+  File "/usr/local/lib/python3.8/dist-packages/dbt_rpc/rpc/node_runners.py", line 68, in error_result
+    raise error
+dbt_rpc.rpc.error.RPCException: RPCException(10004, Compilation Error, {'type': 'UndefinedMacroException', 'message': 'Compilation Error in rpc request (from remote system.sql)\n  \'dbt_utils\' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".', 'raw_code': '-- albums table\n-- {% set tables = [\'stg_songplays\', \'stg_top_tracks\'] %}\n\n-- {% for table in tables %}\n--     select distinct\n--         album_id,\n--         album_name,\n--         album_release_year,\n--         album_type                                   \n--     from {{ ref(table) }}\n--     {% if not loop.last -%} union {%- endif %}\n-- {% endfor %}\n\nselect * from \n{{ dbt_utils.union_relations(\n    relations=[ref(\'stg_songplays\'), ref(\'stg_top_tracks\')],\n    exclude=["album_id","album_name","album_release_year","album_type"]\n) }}\nlimit 500\n/* limit added automatically by dbt cloud */', 'compiled_code': None, 'tags': None}, None)
+2022-12-25 17:42:59.168908 (Thread-162): handling poll request
+2022-12-25 17:42:59.169351 (Thread-162): 17:42:59  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe045ab20>]}
+2022-12-25 17:42:59.170150 (Thread-162): sending response (<Response 9100 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:43:06.944574 (Thread-163): handling status request
+2022-12-25 17:43:06.944986 (Thread-163): 17:43:06  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe045af10>]}
+2022-12-25 17:43:06.946647 (Thread-163): sending response (<Response 33746 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:43:07.170130 (Thread-164): handling deps request
+2022-12-25 17:43:07.170545 (Thread-164): 17:43:07  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe046d0a0>]}
+2022-12-25 17:43:07.211416 (Thread-165): handling status request
+2022-12-25 17:43:07.212629 (Thread-164): sending response (<Response 140 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:43:07.215398 (Thread-165): 17:43:07  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34fa1d60>]}
+2022-12-25 17:43:07.217134 (Thread-165): sending response (<Response 187 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:43:07.395990 (Thread-166): handling poll request
+2022-12-25 17:43:07.396375 (Thread-166): 17:43:07  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34fa1670>]}
+2022-12-25 17:43:07.396907 (Thread-166): sending response (<Response 289 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:43:08.434141 (Thread-167): handling status request
+2022-12-25 17:43:08.434562 (Thread-167): 17:43:08  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34fa1670>]}
+2022-12-25 17:43:08.461312 (Thread-167): sending response (<Response 187 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:43:08.580348 (Thread-168): handling poll request
+2022-12-25 17:43:08.580687 (Thread-168): 17:43:08  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34faed60>]}
+2022-12-25 17:43:08.581125 (Thread-168): sending response (<Response 289 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:43:09.710111 (Thread-169): handling status request
+2022-12-25 17:43:09.710511 (Thread-169): 17:43:09  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34f88ac0>]}
+2022-12-25 17:43:09.710929 (Thread-169): sending response (<Response 187 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:43:09.788570 (Thread-170): handling poll request
+2022-12-25 17:43:09.788909 (Thread-170): 17:43:09  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34f885e0>]}
+2022-12-25 17:43:09.789351 (Thread-170): sending response (<Response 289 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:43:09.791401 (MainThread): 17:43:09  Warning: No packages were found in packages.yml
+2022-12-25 17:43:10.019955 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Unable to do partial parsing because config vars, config profile, or config target have changed
+2022-12-25 17:43:10.020322 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34f1ae80>]}
+2022-12-25 17:43:10.240070 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/etc.sql
+2022-12-25 17:43:10.242170 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/catalog.sql
+2022-12-25 17:43:10.247784 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/adapters.sql
+2022-12-25 17:43:10.267460 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/adapters/apply_grants.sql
+2022-12-25 17:43:10.269891 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/materializations/seed.sql
+2022-12-25 17:43:10.272215 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/materializations/incremental.sql
+2022-12-25 17:43:10.288713 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/materializations/snapshot.sql
+2022-12-25 17:43:10.290389 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/materializations/table.sql
+2022-12-25 17:43:10.297048 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/materializations/copy.sql
+2022-12-25 17:43:10.299634 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/materializations/view.sql
+2022-12-25 17:43:10.302265 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/intersect.sql
+2022-12-25 17:43:10.302675 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/position.sql
+2022-12-25 17:43:10.303221 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/escape_single_quotes.sql
+2022-12-25 17:43:10.303805 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/safe_cast.sql
+2022-12-25 17:43:10.304337 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/array_construct.sql
+2022-12-25 17:43:10.305151 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/datediff.sql
+2022-12-25 17:43:10.306346 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/timestamps.sql
+2022-12-25 17:43:10.307447 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/array_concat.sql
+2022-12-25 17:43:10.307991 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/right.sql
+2022-12-25 17:43:10.308625 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/array_append.sql
+2022-12-25 17:43:10.309233 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/split_part.sql
+2022-12-25 17:43:10.310650 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/date_trunc.sql
+2022-12-25 17:43:10.311211 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/hash.sql
+2022-12-25 17:43:10.311758 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/except.sql
+2022-12-25 17:43:10.312155 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/bool_or.sql
+2022-12-25 17:43:10.312617 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/dateadd.sql
+2022-12-25 17:43:10.313243 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/listagg.sql
+2022-12-25 17:43:10.314245 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/etc/statement.sql
+2022-12-25 17:43:10.319057 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/etc/datetime.sql
+2022-12-25 17:43:10.326791 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/adapters/apply_grants.sql
+2022-12-25 17:43:10.339537 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/adapters/freshness.sql
+2022-12-25 17:43:10.341391 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/adapters/columns.sql
+2022-12-25 17:43:10.350313 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/adapters/timestamps.sql
+2022-12-25 17:43:10.353519 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/adapters/relation.sql
+2022-12-25 17:43:10.367045 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/adapters/schema.sql
+2022-12-25 17:43:10.369117 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/adapters/persist_docs.sql
+2022-12-25 17:43:10.373364 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/adapters/metadata.sql
+2022-12-25 17:43:10.379996 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/adapters/indexes.sql
+2022-12-25 17:43:10.382548 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/get_custom_name/get_custom_database.sql
+2022-12-25 17:43:10.384047 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/get_custom_name/get_custom_schema.sql
+2022-12-25 17:43:10.386364 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/get_custom_name/get_custom_alias.sql
+2022-12-25 17:43:10.388183 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/python_model/python.sql
+2022-12-25 17:43:10.393804 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/materializations/hooks.sql
+2022-12-25 17:43:10.397405 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/materializations/configs.sql
+2022-12-25 17:43:10.399638 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/materializations/seeds/seed.sql
+2022-12-25 17:43:10.405927 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/materializations/seeds/helpers.sql
+2022-12-25 17:43:10.423541 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/materializations/tests/test.sql
+2022-12-25 17:43:10.427685 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/materializations/tests/helpers.sql
+2022-12-25 17:43:10.429333 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/materializations/tests/where_subquery.sql
+2022-12-25 17:43:10.431069 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/materializations/models/view/helpers.sql
+2022-12-25 17:43:10.432328 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/materializations/models/view/create_or_replace_view.sql
+2022-12-25 17:43:10.435430 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/materializations/models/view/create_view_as.sql
+2022-12-25 17:43:10.437639 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/materializations/models/view/view.sql
+2022-12-25 17:43:10.442766 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/materializations/models/incremental/strategies.sql
+2022-12-25 17:43:10.449256 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/materializations/models/incremental/column_helpers.sql
+2022-12-25 17:43:10.456614 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/materializations/models/incremental/incremental.sql
+2022-12-25 17:43:10.466020 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/materializations/models/incremental/on_schema_change.sql
+2022-12-25 17:43:10.480999 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/materializations/models/incremental/is_incremental.sql
+2022-12-25 17:43:10.482422 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/materializations/models/incremental/merge.sql
+2022-12-25 17:43:10.496144 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/materializations/models/table/create_table_as.sql
+2022-12-25 17:43:10.499451 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/materializations/models/table/table.sql
+2022-12-25 17:43:10.504532 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/materializations/snapshots/strategies.sql
+2022-12-25 17:43:10.519252 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/materializations/snapshots/snapshot_merge.sql
+2022-12-25 17:43:10.520806 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/materializations/snapshots/snapshot.sql
+2022-12-25 17:43:10.531294 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/materializations/snapshots/helpers.sql
+2022-12-25 17:43:10.542968 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/generic_test_sql/not_null.sql
+2022-12-25 17:43:10.543837 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/generic_test_sql/relationships.sql
+2022-12-25 17:43:10.544673 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/generic_test_sql/unique.sql
+2022-12-25 17:43:10.545336 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/generic_test_sql/accepted_values.sql
+2022-12-25 17:43:10.546663 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/intersect.sql
+2022-12-25 17:43:10.547532 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/position.sql
+2022-12-25 17:43:10.548590 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/escape_single_quotes.sql
+2022-12-25 17:43:10.549598 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/safe_cast.sql
+2022-12-25 17:43:10.550857 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/array_construct.sql
+2022-12-25 17:43:10.552353 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/cast_bool_to_text.sql
+2022-12-25 17:43:10.553384 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/datediff.sql
+2022-12-25 17:43:10.554615 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/concat.sql
+2022-12-25 17:43:10.555590 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/length.sql
+2022-12-25 17:43:10.556522 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/any_value.sql
+2022-12-25 17:43:10.557462 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/data_types.sql
+2022-12-25 17:43:10.564339 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/array_concat.sql
+2022-12-25 17:43:10.565381 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/right.sql
+2022-12-25 17:43:10.566479 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/array_append.sql
+2022-12-25 17:43:10.567557 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/last_day.sql
+2022-12-25 17:43:10.569315 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/split_part.sql
+2022-12-25 17:43:10.571260 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/date_trunc.sql
+2022-12-25 17:43:10.572304 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/literal.sql
+2022-12-25 17:43:10.573218 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/hash.sql
+2022-12-25 17:43:10.574288 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/except.sql
+2022-12-25 17:43:10.575258 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/bool_or.sql
+2022-12-25 17:43:10.576193 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/replace.sql
+2022-12-25 17:43:10.577398 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/dateadd.sql
+2022-12-25 17:43:10.578667 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing macros/utils/listagg.sql
+2022-12-25 17:43:10.580825 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  Parsing tests/generic/builtin.sql
+2022-12-25 17:43:10.833847 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  1699: static parser successfully parsed mart/fct_top_tracks.sql
+2022-12-25 17:43:10.836695 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  1699: static parser successfully parsed mart/fct_songplays.sql
+2022-12-25 17:43:10.839418 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  1699: static parser successfully parsed mart/fct_top_artists.sql
+2022-12-25 17:43:10.841981 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  1603: static parser failed on mart/dim_artists.sql
+2022-12-25 17:43:10.847116 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  1602: parser fallback to jinja rendering on mart/dim_artists.sql
+2022-12-25 17:43:10.848403 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  1603: static parser failed on mart/dim_albums.sql
+2022-12-25 17:43:10.852936 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  1602: parser fallback to jinja rendering on mart/dim_albums.sql
+2022-12-25 17:43:10.854239 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  1603: static parser failed on mart/dim_tracks.sql
+2022-12-25 17:43:10.859185 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  1602: parser fallback to jinja rendering on mart/dim_tracks.sql
+2022-12-25 17:43:10.860509 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  1699: static parser successfully parsed staging/stg_top_tracks.sql
+2022-12-25 17:43:10.863314 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  1699: static parser successfully parsed staging/stg_songplays.sql
+2022-12-25 17:43:10.865919 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  1699: static parser successfully parsed staging/stg_top_artists.sql
+2022-12-25 17:43:10.868754 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  1699: static parser successfully parsed view/vw_top_track_genres.sql
+2022-12-25 17:43:10.871663 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  1699: static parser successfully parsed view/vw_top_artist_genres.sql
+2022-12-25 17:43:10.874684 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  1699: static parser successfully parsed view/vw_songplays_genres.sql
+2022-12-25 17:43:10.877671 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:10  1699: static parser successfully parsed view/vw_songplays_albums.sql
+2022-12-25 17:43:10.989386 (Thread-171): handling status request
+2022-12-25 17:43:11.010114 (Thread-171): 17:43:11  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec14053e20>]}
+2022-12-25 17:43:11.015687 (Thread-171): sending response (<Response 187 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:43:11.026559 (Thread-172): handling poll request
+2022-12-25 17:43:11.047761 (Thread-172): 17:43:11  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec283f43d0>]}
+2022-12-25 17:43:11.053354 (Thread-172): sending response (<Response 587 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:43:11.100006 (39a4eab2-a55f-4f30-8649-26c83d228f4e-handler-deps): 17:43:11  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34ca3df0>]}
+2022-12-25 17:43:12.267968 (Thread-173): handling status request
+2022-12-25 17:43:12.268382 (Thread-173): 17:43:12  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec35006100>]}
+2022-12-25 17:43:12.268835 (Thread-173): sending response (<Response 481 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:43:12.273070 (Thread-174): handling poll request
+2022-12-25 17:43:12.273336 (Thread-174): 17:43:12  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec350063a0>]}
+2022-12-25 17:43:12.273758 (Thread-174): sending response (<Response 361 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:43:12.795660 (Thread-175): handling status request
+2022-12-25 17:43:12.796064 (Thread-175): 17:43:12  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec34f41400>]}
+2022-12-25 17:43:12.796502 (Thread-175): sending response (<Response 481 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:43:12.822646 (Thread-176): handling status request
+2022-12-25 17:43:12.822932 (Thread-176): 17:43:12  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe0541580>]}
+2022-12-25 17:43:12.823288 (Thread-176): sending response (<Response 481 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:43:12.866049 (Thread-177): handling status request
+2022-12-25 17:43:12.866326 (Thread-177): 17:43:12  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe0541ac0>]}
+2022-12-25 17:43:12.866659 (Thread-177): sending response (<Response 481 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:43:45.331698 (Thread-178): 17:43:45  Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+2022-12-25 17:43:45.331913 (Thread-178): 17:43:45  Partial parsing enabled, no changes found, skipping parsing
+2022-12-25 17:43:45.338508 (Thread-178): 17:43:45  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe01d5f70>]}
+2022-12-25 17:43:45.783354 (Thread-179): handling status request
+2022-12-25 17:43:45.783766 (Thread-179): 17:43:45  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe028ca60>]}
+2022-12-25 17:43:45.784229 (Thread-179): sending response (<Response 1273 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:43:45.814645 (Thread-180): handling status request
+2022-12-25 17:43:45.814958 (Thread-180): 17:43:45  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe028c8b0>]}
+2022-12-25 17:43:45.815386 (Thread-180): sending response (<Response 1273 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:44:24.336940 (Thread-182): handling status request
+2022-12-25 17:44:24.337359 (Thread-182): 17:44:24  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe01d7a60>]}
+2022-12-25 17:44:24.337827 (Thread-182): sending response (<Response 363 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:44:24.380224 (Thread-183): handling status request
+2022-12-25 17:44:24.380521 (Thread-183): 17:44:24  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe028c3d0>]}
+2022-12-25 17:44:24.380886 (Thread-183): sending response (<Response 363 bytes [200 OK]>) to 10.0.192.137
+2022-12-25 17:44:30.283085 (Thread-184): handling status request
+2022-12-25 17:44:30.283511 (Thread-184): 17:44:30  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'c90ee146-f111-49e8-9a08-ea22f9545476', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7febe028ce50>]}
+2022-12-25 17:44:30.283942 (Thread-184): sending response (<Response 363 bytes [200 OK]>) to 10.0.192.137

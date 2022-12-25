@@ -1,0 +1,33 @@
+-- artists table
+
+
+
+    select distinct
+        artist_id,
+        artist_name,
+        artist_popularity,
+        artist_followers,
+        artist_genre,
+        artist_genre_others                                     
+    from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_songplays`
+    union
+
+    select distinct
+        artist_id,
+        artist_name,
+        artist_popularity,
+        artist_followers,
+        artist_genre,
+        artist_genre_others                                     
+    from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_top_artists`
+    union
+
+    select distinct
+        artist_id,
+        artist_name,
+        artist_popularity,
+        artist_followers,
+        artist_genre,
+        artist_genre_others                                     
+    from `dbt-demo-data-372717`.`dbt_ddemo`.`stg_top_tracks`
+    
