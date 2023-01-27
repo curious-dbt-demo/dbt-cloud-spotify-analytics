@@ -8,6 +8,8 @@ spotify_analytics
 __pycache__/
 *.py[cod]
 *.class
+dbt_packages/
+target/
 
 # Secrets
 config.py
