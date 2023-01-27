@@ -1,0 +1,10 @@
+spotify_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: dbt-demo-data-372717
+      dataset: dbt_ddemo
+      threads: 1
+      keyfile: ./keyfile.json
