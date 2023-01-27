@@ -7,7 +7,7 @@ import os
 from pathlib import Path
 
 # openai.api_key = os.getenv("OPENAI_API_KEY")
-openai.api_key = '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'
+openai.api_key = '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'
 
 def ai_completion(text_prompt):
     return openai.Completion.create(
